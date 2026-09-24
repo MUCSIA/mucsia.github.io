@@ -1,0 +1,771 @@
+<!doctype html>
+<html lang="cs" data-lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ukázka prověrky, MUCSIA</title>
+<meta name="description" content="Ukázka prověrky MUCSIA na smyšlené firmě: nálezy, důkazy, dohledatelnost a mapa rizik.">
+<meta name="theme-color" content="#15102A">
+<meta name="referrer" content="no-referrer">
+<link rel="canonical" href="https://mucsia.github.io/cs/ukazka/">
+<link rel="alternate" hreflang="cs" href="https://mucsia.github.io/cs/ukazka/">
+<link rel="alternate" hreflang="en" href="https://mucsia.github.io/sample/">
+<link rel="alternate" hreflang="x-default" href="https://mucsia.github.io/sample/">
+<link rel="icon" href="../../static/img/mucsia-ikona.svg" type="image/svg+xml">
+<link rel="preload" href="../../static/fonts/Archivo-w800-s80.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../static/fonts/Archivo-w400-s100.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.classList.add("js")</script>
+<link rel="stylesheet" href="../../static/site.css?v=0013ce17ef">
+<meta property="og:title" content="Ukázka prověrky">
+<meta property="og:description" content="Ukázka prověrky MUCSIA na smyšlené firmě: nálezy, důkazy, dohledatelnost a mapa rizik.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mucsia.github.io/cs/ukazka/">
+<meta property="og:image" content="https://mucsia.github.io/static/img/og.png">
+<meta property="og:locale" content="cs_CZ">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"MUCSIA","url":"https://mucsia.github.io/","inLanguage":["en","cs"]}</script>
+</head>
+<body class="page-sample" data-endpoint="">
+<a class="skip" href="#main">Přeskočit na obsah</a>
+<header class="hdr" id="hdr">
+  <div class="hdr-in">
+    <a class="brand" href="../../cs/" aria-label="MUCSIA"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0.00 -1118.87 7929.15 1551.73"><defs></defs><g transform="translate(-123.48 -1577.8) scale(20.58)"><path d="M6 60 A67.5 67.5 0 0 1 114 60 A67.5 67.5 0 0 1 6 60 Z" fill="none" stroke="#F5F4F7" stroke-width="11" stroke-linejoin="miter"/><path d="M43 60 A17 17 0 1 0 77 60 A17 17 0 1 0 43 60 Z M62.7 50.2 H68.9 A0.8 0.8 0 0 1 69.7 51 V55.4 A0.8 0.8 0 0 1 68.9 56.2 H62.7 A0.8 0.8 0 0 1 61.9 55.4 V51 A0.8 0.8 0 0 1 62.7 50.2 Z" fill="#F5F4F7" fill-rule="evenodd"/></g><path d="M84.50048828125 0.0V-687.54345703125H403.10595703125L520.97705078125 -389.4326171875Q528.5205078125 -370.71533203125 538.118408203125 -342.7587890625Q547.71630859375 -314.80224609375 557.4990234375 -285.47607421875Q567.28173828125 -256.14990234375 574.564453125 -233.41064453125H581.564453125Q588.390625 -254.23681640625 597.945068359375 -282.06298828125Q607.49951171875 -309.88916015625 617.597412109375 -338.617431640625Q627.6953125 -367.345703125 635.6953125 -388.51953125L753.56640625 -687.54345703125H1063.36767578125V0.0H859.7392578125V-354.78515625Q859.7392578125 -376.1328125 860.2392578125 -402.02392578125Q860.7392578125 -427.9150390625 861.7392578125 -453.034423828125Q862.7392578125 -478.15380859375 863.19580078125 -496.41455078125H855.19580078125Q849.10888671875 -477.06689453125 840.293701171875 -450.904052734375Q831.478515625 -424.7412109375 822.663330078125 -399.121826171875Q813.84814453125 -373.50244140625 806.3046875 -354.78515625L662.23779296875 0.0H475.65234375L331.12890625 -354.78515625Q321.0419921875 -381.306640625 311.455078125 -408.2412109375Q301.8681640625 -435.17578125 294.552978515625 -458.47998046875Q287.23779296875 -481.7841796875 282.23779296875 -496.41455078125H274.23779296875Q275.23779296875 -482.24072265625 275.73779296875 -458.9365234375Q276.23779296875 -435.63232421875 276.73779296875 -408.69775390625Q277.23779296875 -381.76318359375 277.23779296875 -354.78515625V0.0Z M1661.9560546875 12.0Q1525.89111328125 12.0 1436.771728515625 -27.728271484375Q1347.65234375 -67.45654296875 1303.706787109375 -142.5869140625Q1259.76123046875 -217.71728515625 1259.76123046875 -323.6953125V-687.54345703125H1463.3896484375V-332.869140625Q1463.3896484375 -240.93408203125 1515.28125 -190.19482421875Q1567.1728515625 -139.45556640625 1661.9560546875 -139.45556640625Q1757.28271484375 -139.45556640625 1809.17431640625 -190.19482421875Q1861.06591796875 -240.93408203125 1861.06591796875 -332.869140625V-687.54345703125H2064.6943359375V-323.6953125Q2064.6943359375 -217.71728515625 2020.748779296875 -142.5869140625Q1976.80322265625 -67.45654296875 1887.640380859375 -27.728271484375Q1798.4775390625 12.0 1661.9560546875 12.0Z M2663.45654296875 12.0Q2519.02197265625 12.0 2422.84814453125 -28.5Q2326.67431640625 -69.0 2278.859130859375 -148.228271484375Q2231.0439453125 -227.45654296875 2231.0439453125 -344.0Q2231.0439453125 -514.54345703125 2341.76123046875 -607.04345703125Q2452.478515625 -699.54345703125 2664.0869140625 -699.54345703125Q2782.2607421875 -699.54345703125 2872.119384765625 -664.097900390625Q2961.97802734375 -628.65234375 3012.56494140625 -564.206787109375Q3063.15185546875 -499.76123046875 3063.15185546875 -412.3046875H2864.697265625Q2864.697265625 -454.6962890625 2839.1318359375 -485.207275390625Q2813.56640625 -515.71826171875 2767.80517578125 -532.1748046875Q2722.0439453125 -548.63134765625 2660.54345703125 -548.63134765625Q2589.23876953125 -548.63134765625 2539.9775390625 -524.489990234375Q2490.71630859375 -500.3486328125 2465.509521484375 -457.23974609375Q2440.302734375 -414.130859375 2440.302734375 -357.0V-332.0Q2440.302734375 -275.49951171875 2465.509521484375 -231.890625Q2490.71630859375 -188.28173828125 2539.390625 -163.596923828125Q2588.06494140625 -138.912109375 2658.28271484375 -138.912109375Q2724.41357421875 -138.912109375 2771.76171875 -154.596923828125Q2819.10986328125 -170.28173828125 2844.71875 -200.249267578125Q2870.32763671875 -230.216796875 2870.32763671875 -272.15185546875H3063.6083984375Q3063.6083984375 -187.23876953125 3014.880126953125 -123.06494140625Q2966.15185546875 -58.89111328125 2876.521484375 -23.445556640625Q2786.89111328125 12.0 2663.45654296875 12.0Z M3599.564453125 12.0Q3515.58642578125 12.0 3442.6953125 1.95654296875Q3369.80419921875 -8.0869140625 3315.0 -33.13037109375Q3260.19580078125 -58.173828125 3229.250244140625 -102.989013671875Q3198.3046875 -147.80419921875 3198.3046875 -216.80419921875Q3198.3046875 -218.80419921875 3198.3046875 -222.075927734375Q3198.3046875 -225.34765625 3199.3046875 -228.4345703125H3398.75927734375Q3397.75927734375 -224.4345703125 3397.531005859375 -220.021484375Q3397.302734375 -215.6083984375 3397.302734375 -210.7822265625Q3397.302734375 -180.32568359375 3420.49853515625 -162.727783203125Q3443.6943359375 -145.1298828125 3486.0859375 -138.031982421875Q3528.4775390625 -130.93408203125 3584.6083984375 -130.93408203125Q3608.173828125 -130.93408203125 3632.78271484375 -132.34716796875Q3657.3916015625 -133.76025390625 3680.315673828125 -137.401611328125Q3703.23974609375 -141.04296875 3721.47900390625 -147.869140625Q3739.71826171875 -154.6953125 3750.587890625 -165.47802734375Q3761.45751953125 -176.2607421875 3761.45751953125 -191.54345703125Q3761.45751953125 -213.19580078125 3738.5009765625 -225.706787109375Q3715.54443359375 -238.2177734375 3676.359619140625 -245.772216796875Q3637.1748046875 -253.32666015625 3588.533447265625 -259.23974609375Q3539.89208984375 -265.15283203125 3487.750732421875 -273.381103515625Q3435.609375 -281.609375 3386.968017578125 -296.109375Q3338.32666015625 -310.609375 3299.141845703125 -334.6962890625Q3259.95703125 -358.783203125 3237.00048828125 -396.641845703125Q3214.0439453125 -434.50048828125 3214.0439453125 -489.130859375Q3214.0439453125 -543.65234375 3241.663330078125 -583.36962890625Q3269.28271484375 -623.0869140625 3319.173828125 -648.858642578125Q3369.06494140625 -674.63037109375 3437.010498046875 -687.0869140625Q3504.9560546875 -699.54345703125 3585.06494140625 -699.54345703125Q3666.71728515625 -699.54345703125 3733.162841796875 -686.902099609375Q3799.6083984375 -674.2607421875 3847.314697265625 -648.80419921875Q3895.02099609375 -623.34765625 3920.683837890625 -584.673828125Q3946.3466796875 -546.0 3946.3466796875 -493.93505859375V-480.10888671875H3748.89208984375V-488.2177734375Q3748.89208984375 -509.130859375 3730.8701171875 -525.315673828125Q3712.84814453125 -541.50048828125 3678.36962890625 -551.228759765625Q3643.89111328125 -560.95703125 3594.6083984375 -560.95703125Q3535.6513671875 -560.95703125 3497.71630859375 -553.58740234375Q3459.78125 -546.2177734375 3441.770263671875 -533.43505859375Q3423.75927734375 -520.65234375 3423.75927734375 -505.45654296875Q3423.75927734375 -485.173828125 3446.7158203125 -473.34765625Q3469.67236328125 -461.521484375 3508.857177734375 -454.65185546875Q3548.0419921875 -447.7822265625 3596.683349609375 -441.869140625Q3645.32470703125 -435.9560546875 3697.466064453125 -427.771240234375Q3749.607421875 -419.58642578125 3798.248779296875 -405.858154296875Q3846.89013671875 -392.1298828125 3886.074951171875 -368.358154296875Q3925.259765625 -344.58642578125 3948.21630859375 -308.271240234375Q3971.1728515625 -271.9560546875 3971.1728515625 -218.869140625Q3971.1728515625 -136.15185546875 3923.270751953125 -85.206298828125Q3875.36865234375 -34.2607421875 3791.466552734375 -11.13037109375Q3707.564453125 12.0 3599.564453125 12.0Z M4129.50048828125 0.0V-687.54345703125H4333.12890625V0.0Z M4463.3046875 0.0 4801.32666015625 -687.54345703125H5027.67236328125L5365.6943359375 0.0H5145.435546875L5093.478515625 -110.1748046875H4724.5205078125L4673.10693359375 0.0ZM4792.67236328125 -259.2607421875H5025.32666015625L4962.71728515625 -399.0009765625Q4958.80419921875 -408.37060546875 4951.749755859375 -425.52294921875Q4944.6953125 -442.67529296875 4937.097412109375 -462.186279296875Q4929.49951171875 -481.697265625 4923.08642578125 -498.468994140625Q4916.67333984375 -515.24072265625 4913.49951171875 -523.3056640625H4906.04296875Q4898.67333984375 -504.93603515625 4889.075439453125 -481.10986328125Q4879.4775390625 -457.28369140625 4870.60791015625 -434.9140625Q4861.73828125 -412.54443359375 4855.28173828125 -398.54443359375Z" transform="translate(2563.46 0)" fill="#F5F4F7"/></svg></a>
+    <nav class="nav" aria-label="Hlavní">
+      <a href="../../cs/ukazka/" aria-current="page">Ukázka prověrky</a>
+      <a href="../../cs/kontakt/">Ozvěte se</a>
+      <a class="lang" href="../../sample/" hreflang="en" lang="en" title="English"><span class="cur">CZ</span><span class="sep" aria-hidden="true">|</span><span>EN</span></a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="dark sec-sample-head">
+  <div class="grain"></div>
+  <div class="sec-in">
+    <p class="badge">Ukázka na smyšlené firmě</p>
+    <h1 class="h-xl">Ukázka prověrky</h1>
+    <p class="lead">Stejná konzole a stejné strany reportu jako u skutečné prověrky, naplněné smyšlenou firmou. Filtrujte podle toho, jak snadno kdo nález najde a k čemu by šel použít.</p>
+    <p class="sample-meta tnum">22 nálezů, 9 vrstev, 5 kol hledání</p>
+  </div>
+</section>
+
+<section class="dark sec-console">
+  <div class="grain"></div>
+  <div class="sec-in">
+<div class="con" data-console data-mode="auto">
+  <div class="con-left">
+    <ol class="con-layers" aria-label="Prověrka běží, dokud se neobjeví nic nového">
+<li><i></i><span>Rejstříky a úřady</span></li>
+<li><i></i><span>Soudy</span></li>
+<li><i></i><span>Média</span></li>
+<li><i></i><span>Recenze a diskuze</span></li>
+<li><i></i><span>Vyhledávání a AI</span></li>
+<li><i></i><span>Technická stopa a bezpečnost</span></li>
+<li><i></i><span>Rozpor slova a činu</span></li>
+<li><i></i><span>Propojení</span></li>
+<li><i></i><span>Lidé a procesy</span></li>
+    </ol>
+    <div class="con-counters">
+      <div class="cnt"><b class="tnum" data-cnt="sources">0</b><span>prověřených zdrojů</span></div>
+      <div class="cnt"><b class="tnum" data-cnt="leads">0</b><span>otevřených stop</span></div>
+      <div class="cnt"><span class="cnt-note" data-status data-start="Začínáme od IČO" data-lead="Nová stopa otevírá další kolo" data-sat="Kolo nepřineslo nic nového. Nasyceno." data-rep="Nálezy jdou do reportu">Začínáme od IČO</span></div>
+    </div>
+  </div>
+  <div class="con-right">
+    <div class="con-stage" data-stage>
+      <article class="fc" data-card="0" data-cat="scandal">
+        <header><span class="fc-cat">Dohledatelná kauza</span><span class="fc-find f-day"><i></i><i></i><i></i>Specialista za den</span></header>
+        <p class="fc-attack">Subdodavatelům platí, až když je k tomu donutí soud.</p>
+        <footer class="fc-ev"><span class="fc-evl">Důkaz</span><span>Databáze soudních rozhodnutí</span><span class="tnum">15. 9. 2026 10:42</span><span class="fc-hash tnum">a91f 3c0e</span></footer>
+      </article>
+      <article class="fc" data-card="1" data-cat="media">
+        <header><span class="fc-cat">Mediální riziko</span><span class="fc-find f-minute"><i></i><i></i><i></i>Kdokoli za minutu</span></header>
+        <p class="fc-attack">I Google si myslí, že je to podvod.</p>
+        <footer class="fc-ev"><span class="fc-evl">Důkaz</span><span>Našeptávač, první stránka</span><span class="tnum">15. 9. 2026 11:05</span><span class="fc-hash tnum">7d2b e410</span></footer>
+      </article>
+      <article class="fc" data-card="2" data-cat="money">
+        <header><span class="fc-cat">Kudy tečou peníze</span><span class="fc-find f-hour"><i></i><i></i><i></i>Zvědavec za hodinu</span></header>
+        <p class="fc-attack">Jejich investor vznikl dva měsíce před tím, než investoval.</p>
+        <footer class="fc-ev"><span class="fc-evl">Důkaz</span><span>Veřejný rejstřík, historie kapitálu</span><span class="tnum">16. 9. 2026 09:17</span><span class="fc-hash tnum">c3e8 5f71</span></footer>
+      </article>
+      <article class="fc" data-card="3" data-cat="leverage">
+        <header><span class="fc-cat">Páka k vydírání</span><span class="fc-find f-day"><i></i><i></i><i></i>Specialista za den</span></header>
+        <p class="fc-attack">Celý jejich ceník je jedno hledání daleko.</p>
+        <footer class="fc-ev"><span class="fc-evl">Důkaz</span><span>Index vyhledávače, vystavený soubor</span><span class="tnum">16. 9. 2026 14:29</span><span class="fc-hash tnum">e51a 9b06</span></footer>
+      </article>
+      <article class="fc" data-card="4" data-cat="political">
+        <header><span class="fc-cat">Politické riziko</span><span class="fc-find f-hour"><i></i><i></i><i></i>Zvědavec za hodinu</span></header>
+        <p class="fc-attack">Zastupitel, který hlasoval o zakázce, má firmu s jejich jednatelem.</p>
+        <footer class="fc-ev"><span class="fc-evl">Důkaz</span><span>Zápis zastupitelstva, veřejný rejstřík</span><span class="tnum">17. 9. 2026 08:51</span><span class="fc-hash tnum">48fd 12c7</span></footer>
+      </article>
+      <article class="fc" data-card="5" data-cat="people">
+        <header><span class="fc-cat">Kdo za tím stojí</span><span class="fc-find f-hour"><i></i><i></i><i></i>Zvědavec za hodinu</span></header>
+        <p class="fc-attack">Stejní lidé stáli za firmou, která skončila v likvidaci.</p>
+        <footer class="fc-ev"><span class="fc-evl">Důkaz</span><span>Veřejný rejstřík, role</span><span class="tnum">17. 9. 2026 15:36</span><span class="fc-hash tnum">0b7e d3a2</span></footer>
+      </article>
+      <article class="fc fc-struck" data-card="s" data-cat="dirt">
+        <header><span class="fc-cat">Špína na firmu</span><span class="fc-find f-hour"><i></i><i></i><i></i>Zvědavec za hodinu</span></header>
+        <p class="fc-attack">Firma dluží mzdy bývalým zaměstnancům.</p>
+        <p class="fc-reason">Jmenovec, jiné IČO</p>
+        <footer class="fc-ev"><span class="fc-evl">Důkaz</span><span>Recenze zaměstnavatele</span><span class="tnum">16. 9. 2026 12:02</span><span class="fc-hash tnum">51c0 77e9</span></footer>
+      </article>
+    </div>
+    <div class="con-report" data-report aria-hidden="true">
+      <div class="rep-cover">
+        <div class="rep-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><defs><radialGradient id="mrg" cx="50%" cy="50%" r="50%"><stop offset="0.0" stop-color="#FFF7DA"/><stop offset="0.34" stop-color="#FFF7DA"/><stop offset="0.34" stop-color="#FFD84D"/><stop offset="0.58" stop-color="#FFD84D"/><stop offset="0.58" stop-color="#FF9A1F"/><stop offset="0.8" stop-color="#FF9A1F"/><stop offset="0.8" stop-color="#F0543A"/><stop offset="1.0" stop-color="#F0543A"/></radialGradient></defs><path d="M6 60 A67.5 67.5 0 0 1 114 60 A67.5 67.5 0 0 1 6 60 Z" fill="none" stroke="#F5F4F7" stroke-width="11" stroke-linejoin="miter"/><path d="M43 60 A17 17 0 1 0 77 60 A17 17 0 1 0 43 60 Z M62.7 50.2 H68.9 A0.8 0.8 0 0 1 69.7 51 V55.4 A0.8 0.8 0 0 1 68.9 56.2 H62.7 A0.8 0.8 0 0 1 61.9 55.4 V51 A0.8 0.8 0 0 1 62.7 50.2 Z" fill="url(#mrg)" fill-rule="evenodd"/></svg></div>
+        <div class="rep-txt"><b>Report</b><span>Důvěrné</span></div>
+      </div>
+    </div>
+  </div>
+</div>  </div>
+</section>
+
+<section class="paper sec-findings" id="findings">
+  <div class="sec-in">
+    <div class="verdict-box">
+      <h2 class="h-m">Shrnutí pro majitele</h2>
+      <p>Nejhorší políčko, tedy kritický nález, který najde kdokoli za minutu, je prázdné. Tři kritické věci ale najde každý, kdo si dá hodinu s rejstříky a den s archivy. Největší škoda vzniká spojením: předchozí insolvence, půjčky od spřízněné firmy, společník s nedohledatelným vlastníkem a dar straně starosty v roce zakázky od města. Šest úkolů udělejte tento týden.</p>
+    </div>
+    <div class="filters" data-filters>
+      <fieldset class="fset"><legend>Kdo to najde</legend>
+        <label class="chip"><input type="radio" name="find" value="" checked><span>Vše</span></label>
+<label class="chip"><input type="radio" name="find" value="minute"><span class="fc-find f-minute"><i></i><i></i><i></i>Kdokoli za minutu</span></label>
+<label class="chip"><input type="radio" name="find" value="hour"><span class="fc-find f-hour"><i></i><i></i><i></i>Zvědavec za hodinu</span></label>
+<label class="chip"><input type="radio" name="find" value="day"><span class="fc-find f-day"><i></i><i></i><i></i>Specialista za den</span></label>
+      </fieldset>
+      <fieldset class="fset"><legend>K čemu by to šlo použít</legend>
+        <label class="chip"><input type="radio" name="cat" value="" checked><span>Vše</span></label>
+<label class="chip"><input type="radio" name="cat" value="media"><span>Mediální riziko <b class="tnum">3</b></span></label>
+<label class="chip"><input type="radio" name="cat" value="political"><span>Politické riziko <b class="tnum">2</b></span></label>
+<label class="chip"><input type="radio" name="cat" value="dirt"><span>Špína na firmu <b class="tnum">4</b></span></label>
+<label class="chip"><input type="radio" name="cat" value="scandal"><span>Dohledatelná kauza <b class="tnum">3</b></span></label>
+<label class="chip"><input type="radio" name="cat" value="dots"><span>Spojené tečky <b class="tnum">2</b></span></label>
+<label class="chip"><input type="radio" name="cat" value="money"><span>Kudy tečou peníze <b class="tnum">2</b></span></label>
+<label class="chip"><input type="radio" name="cat" value="people"><span>Kdo za tím stojí <b class="tnum">2</b></span></label>
+<label class="chip"><input type="radio" name="cat" value="leverage"><span>Páka k vydírání <b class="tnum">4</b></span></label>
+      </fieldset>
+    </div>
+    <p class="filters-empty" data-empty hidden>Filtru neodpovídá žádný nález.</p>
+    <div class="fgrid" data-fgrid>
+      <button type="button" class="fcard" data-find="hour" data-cat="dirt" data-sev="latent" data-open="N-01">
+        <span class="fcard-top"><span class="sev s-latent" title="Podmíněné"><i></i><i></i><i></i></span><span class="fc-cat">Špína na firmu</span><span class="fc-find f-hour"><i></i><i></i><i></i>Zvědavec za hodinu</span></span>
+        <span class="fcard-title">Ve sbírce listin chybí účetní závěrky za roky 2023 a 2024</span>
+        <span class="fcard-attack">Firma dva roky nezveřejnila čísla, zrovna od doby, kdy přišly cizí peníze. Co tají?</span>
+        <span class="fcard-meta"><span>N-01</span><span>Vrstva 1</span><span>Ověřeno</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="hour" data-cat="political" data-sev="latent" data-open="N-02">
+        <span class="fcard-top"><span class="sev s-latent" title="Podmíněné"><i></i><i></i><i></i></span><span class="fc-cat">Politické riziko</span><span class="fc-find f-hour"><i></i><i></i><i></i>Zvědavec za hodinu</span></span>
+        <span class="fcard-title">Zakázka pro Městský úřad Dolní Lhota rozdělená na dvě objednávky těsně pod hranicí soutěže</span>
+        <span class="fcard-attack">Zakázku od města dostali bez soutěže, stačilo ji rozseknout na dvě objednávky.</span>
+        <span class="fcard-meta"><span>N-02</span><span>Vrstva 1</span><span>Ověřeno</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="hour" data-cat="political" data-sev="noise" data-open="N-03">
+        <span class="fcard-top"><span class="sev s-noise" title="Šum"><i></i><i></i><i></i></span><span class="fc-cat">Politické riziko</span><span class="fc-find f-hour"><i></i><i></i><i></i>Zvědavec za hodinu</span></span>
+        <span class="fcard-title">Dotace na vzdělávání zaměstnanců: vrácení 5 000 EUR za nesplněný ukazatel</span>
+        <span class="fcard-attack">Museli vracet dotaci. Podívejte se, na co všechno berou veřejné peníze.</span>
+        <span class="fcard-meta"><span>N-03</span><span>Vrstva 1</span><span>Ověřeno</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="day" data-cat="scandal" data-sev="critical" data-open="N-04">
+        <span class="fcard-top"><span class="sev s-critical" title="Kritické"><i></i><i></i><i></i></span><span class="fc-cat">Dohledatelná kauza</span><span class="fc-find f-day"><i></i><i></i><i></i>Specialista za den</span></span>
+        <span class="fcard-title">Pravomocný rozsudek: prohraný spor o 48 000 EUR</span>
+        <span class="fcard-attack">Neplatí subdodavatelům. Musel je k tomu donutit až soud.</span>
+        <span class="fcard-meta"><span>N-04</span><span>Vrstva 2</span><span>Ověřeno</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="minute" data-cat="media" data-sev="noise" data-open="N-05">
+        <span class="fcard-top"><span class="sev s-noise" title="Šum"><i></i><i></i><i></i></span><span class="fc-cat">Mediální riziko</span><span class="fc-find f-minute"><i></i><i></i><i></i>Kdokoli za minutu</span></span>
+        <span class="fcard-title">Článek regionálního webu z roku 2019 o stížnostech sousedů na hluk</span>
+        <span class="fcard-attack">Staví i v noci a na sousedy nehledí.</span>
+        <span class="fcard-meta"><span>N-05</span><span>Vrstva 3</span><span>Ověřeno</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="day" data-cat="scandal" data-sev="noise" data-open="N-06">
+        <span class="fcard-top"><span class="sev s-noise" title="Šum"><i></i><i></i><i></i></span><span class="fc-cat">Dohledatelná kauza</span><span class="fc-find f-day"><i></i><i></i><i></i>Specialista za den</span></span>
+        <span class="fcard-title">Archiv webu uchovává vaši stránku z roku 2021, kde subdodavatele nazýváte „nesolidním partnerem“</span>
+        <span class="fcard-attack">Nejdřív partnera veřejně pomlouvali, pak s ním prohráli u soudu. Stránku smazali, archiv ne.</span>
+        <span class="fcard-meta"><span>N-06</span><span>Vrstva 3</span><span>Ověřeno</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="minute" data-cat="dirt" data-sev="latent" data-open="N-07">
+        <span class="fcard-top"><span class="sev s-latent" title="Podmíněné"><i></i><i></i><i></i></span><span class="fc-cat">Špína na firmu</span><span class="fc-find f-minute"><i></i><i></i><i></i>Kdokoli za minutu</span></span>
+        <span class="fcard-title">Vlna devíti jednohvězdičkových recenzí na Googlu během tří týdnů</span>
+        <span class="fcard-attack">Podívejte se na jejich recenze. Lidé je hodnotí čím dál hůř.</span>
+        <span class="fcard-meta"><span>N-07</span><span>Vrstva 4</span><span>Pravděpodobné</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="minute" data-cat="media" data-sev="latent" data-open="N-08">
+        <span class="fcard-top"><span class="sev s-latent" title="Podmíněné"><i></i><i></i><i></i></span><span class="fc-cat">Mediální riziko</span><span class="fc-find f-minute"><i></i><i></i><i></i>Kdokoli za minutu</span></span>
+        <span class="fcard-title">Našeptávač Googlu u názvu firmy nabízí slovo „podvod“</span>
+        <span class="fcard-attack">Stačí začít psát jejich jméno a Google sám nabídne slovo podvod.</span>
+        <span class="fcard-meta"><span>N-08</span><span>Vrstva 5</span><span>Ověřeno</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="minute" data-cat="media" data-sev="noise" data-open="N-09">
+        <span class="fcard-top"><span class="sev s-noise" title="Šum"><i></i><i></i><i></i></span><span class="fc-cat">Mediální riziko</span><span class="fc-find f-minute"><i></i><i></i><i></i>Kdokoli za minutu</span></span>
+        <span class="fcard-title">ChatGPT tvrdí, že firma prošla v roce 2017 insolvencí. Spojuje ji s předchozí firmou</span>
+        <span class="fcard-attack">I umělá inteligence ví, že už jednou zkrachovali.</span>
+        <span class="fcard-meta"><span>N-09</span><span>Vrstva 5</span><span>Ověřeno</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="day" data-cat="dirt" data-sev="critical" data-open="N-10">
+        <span class="fcard-top"><span class="sev s-critical" title="Kritické"><i></i><i></i><i></i></span><span class="fc-cat">Špína na firmu</span><span class="fc-find f-day"><i></i><i></i><i></i>Specialista za den</span></span>
+        <span class="fcard-title">Zapomenutá subdoména přesměrovává na podvodný web</span>
+        <span class="fcard-attack">Jejich web šíří podvody. Jak můžou chránit data zákazníků, když neuhlídají ani vlastní web?</span>
+        <span class="fcard-meta"><span>N-10</span><span>Vrstva 6</span><span>Ověřeno</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="day" data-cat="leverage" data-sev="latent" data-open="N-11">
+        <span class="fcard-top"><span class="sev s-latent" title="Podmíněné"><i></i><i></i><i></i></span><span class="fc-cat">Páka k vydírání</span><span class="fc-find f-day"><i></i><i></i><i></i>Specialista za den</span></span>
+        <span class="fcard-title">Doména nemá ochranu proti podvrženým e-mailům (DMARC)</span>
+        <span class="fcard-attack">„Dobrý den, zasíláme fakturu. Od tohoto měsíce prosím plaťte na náš nový účet.“</span>
+        <span class="fcard-meta"><span>N-11</span><span>Vrstva 6</span><span>Ověřeno</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="hour" data-cat="leverage" data-sev="latent" data-open="N-12">
+        <span class="fcard-top"><span class="sev s-latent" title="Podmíněné"><i></i><i></i><i></i></span><span class="fc-cat">Páka k vydírání</span><span class="fc-find f-hour"><i></i><i></i><i></i>Zvědavec za hodinu</span></span>
+        <span class="fcard-title">Interní ceník s maržemi z roku 2025 leží v otevřené složce webu a Google ho má v indexu</span>
+        <span class="fcard-attack">Známe vaše marže i slevy pro vaše největší zákazníky. Domluvíme se, nebo to dostanou oni?</span>
+        <span class="fcard-meta"><span>N-12</span><span>Vrstva 6</span><span>Ověřeno</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="day" data-cat="leverage" data-sev="latent" data-open="N-13">
+        <span class="fcard-top"><span class="sev s-latent" title="Podmíněné"><i></i><i></i><i></i></span><span class="fc-cat">Páka k vydírání</span><span class="fc-find f-day"><i></i><i></i><i></i>Specialista za den</span></span>
+        <span class="fcard-title">Ve veřejném repozitáři bývalého dodavatele webu je přístupový klíč k vaší SMS bráně</span>
+        <span class="fcard-attack">Vašim zákazníkům přijde SMS z vašeho čísla s odkazem na falešnou platbu. A vy ji zaplatíte.</span>
+        <span class="fcard-meta"><span>N-13</span><span>Vrstva 6</span><span>Ověřeno</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="hour" data-cat="scandal" data-sev="latent" data-open="N-14">
+        <span class="fcard-top"><span class="sev s-latent" title="Podmíněné"><i></i><i></i><i></i></span><span class="fc-cat">Dohledatelná kauza</span><span class="fc-find f-hour"><i></i><i></i><i></i>Zvědavec za hodinu</span></span>
+        <span class="fcard-title">Web uvádí certifikaci ISO 9001, certifikát vypršel v březnu 2024</span>
+        <span class="fcard-attack">Chlubí se certifikátem, který už dva roky nemají. Co dalšího si přikrášlují?</span>
+        <span class="fcard-meta"><span>N-14</span><span>Vrstva 7</span><span>Ověřeno</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="hour" data-cat="dots" data-sev="critical" data-open="N-15">
+        <span class="fcard-top"><span class="sev s-critical" title="Kritické"><i></i><i></i><i></i></span><span class="fc-cat">Spojené tečky</span><span class="fc-find f-hour"><i></i><i></i><i></i>Zvědavec za hodinu</span></span>
+        <span class="fcard-title">Předchozí firma se stejným jednatelem skončila v roce 2017 v konkursu</span>
+        <span class="fcard-attack">Jednou už nechali věřitele s dluhy čtyři miliony a druhý den jeli dál pod novým jménem. Proč by to neudělali znovu?</span>
+        <span class="fcard-meta"><span>N-15</span><span>Vrstva 8</span><span>Ověřeno</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="day" data-cat="money" data-sev="latent" data-open="N-16">
+        <span class="fcard-top"><span class="sev s-latent" title="Podmíněné"><i></i><i></i><i></i></span><span class="fc-cat">Kudy tečou peníze</span><span class="fc-find f-day"><i></i><i></i><i></i>Specialista za den</span></span>
+        <span class="fcard-title">Nový společník z roku 2024 má nedohledatelného vlastníka</span>
+        <span class="fcard-attack">Tři miliony od čtyřměsíční schránky, jejíhož majitele nikdo nezná. Odkud ty peníze jsou?</span>
+        <span class="fcard-meta"><span>N-16</span><span>Vrstva 8</span><span>Ověřeno</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="day" data-cat="money" data-sev="noise" data-open="N-17">
+        <span class="fcard-top"><span class="sev s-noise" title="Šum"><i></i><i></i><i></i></span><span class="fc-cat">Kudy tečou peníze</span><span class="fc-find f-day"><i></i><i></i><i></i>Specialista za den</span></span>
+        <span class="fcard-title">Půjčky 85 000 EUR od spřízněné firmy bez uvedeného úroku a splatnosti</span>
+        <span class="fcard-attack">Firma žije z půjček od vlastní schránky. Jak to vypadá s penězi doopravdy?</span>
+        <span class="fcard-meta"><span>N-17</span><span>Vrstva 8</span><span>Ověřeno</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="hour" data-cat="dots" data-sev="latent" data-open="N-18">
+        <span class="fcard-top"><span class="sev s-latent" title="Podmíněné"><i></i><i></i><i></i></span><span class="fc-cat">Spojené tečky</span><span class="fc-find f-hour"><i></i><i></i><i></i>Zvědavec za hodinu</span></span>
+        <span class="fcard-title">Spřízněná firma darovala straně starosty 2 000 EUR v roce zakázky od města</span>
+        <span class="fcard-attack">Firma dá straně padesát tisíc, starosta za tu stranu rozdělí zakázku pod limit. Náhoda?</span>
+        <span class="fcard-meta"><span>N-18</span><span>Vrstva 8</span><span>Ověřeno</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="hour" data-cat="people" data-sev="noise" data-open="N-19">
+        <span class="fcard-top"><span class="sev s-noise" title="Šum"><i></i><i></i><i></i></span><span class="fc-cat">Kdo za tím stojí</span><span class="fc-find f-hour"><i></i><i></i><i></i>Zvědavec za hodinu</span></span>
+        <span class="fcard-title">Jednatel je podle rejstříku ve statutárních orgánech čtyř dalších firem, jedna je v likvidaci</span>
+        <span class="fcard-attack">Pět firem, jedna v likvidaci, a všechny pod jedním člověkem. Která je ta, ze které se platí?</span>
+        <span class="fcard-meta"><span>N-19</span><span>Vrstva 8</span><span>Ověřeno</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="hour" data-cat="people" data-sev="latent" data-open="N-20">
+        <span class="fcard-top"><span class="sev s-latent" title="Podmíněné"><i></i><i></i><i></i></span><span class="fc-cat">Kdo za tím stojí</span><span class="fc-find f-hour"><i></i><i></i><i></i>Zvědavec za hodinu</span></span>
+        <span class="fcard-title">Prokurista firmy je společníkem subdodavatele, který pracoval na zakázce pro Dolní Lhotu</span>
+        <span class="fcard-attack">Člověk, který za firmu podepisuje, si posílá zakázky do vlastní firmy.</span>
+        <span class="fcard-meta"><span>N-20</span><span>Vrstva 8</span><span>Ověřeno</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="hour" data-cat="dirt" data-sev="noise" data-open="N-21">
+        <span class="fcard-top"><span class="sev s-noise" title="Šum"><i></i><i></i><i></i></span><span class="fc-cat">Špína na firmu</span><span class="fc-find f-hour"><i></i><i></i><i></i>Zvědavec za hodinu</span></span>
+        <span class="fcard-title">Recenze zaměstnavatele: tři zmínky o pozdních výplatách</span>
+        <span class="fcard-attack">Ani vlastním lidem neplatí včas. Jak jsou na tom s penězi?</span>
+        <span class="fcard-meta"><span>N-21</span><span>Vrstva 9</span><span>Ověřeno</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="hour" data-cat="leverage" data-sev="latent" data-open="N-22">
+        <span class="fcard-top"><span class="sev s-latent" title="Podmíněné"><i></i><i></i><i></i></span><span class="fc-cat">Páka k vydírání</span><span class="fc-find f-hour"><i></i><i></i><i></i>Zvědavec za hodinu</span></span>
+        <span class="fcard-title">Veřejný příspěvek pracovníka firmy na Instagramu ukazuje smlouvu se zákazníkem včetně adresy a ceny</span>
+        <span class="fcard-attack">Vaše firma vystavila na internet moji adresu a kolik jsem zaplatil. Buď to vyřešíme, nebo to řeším s úřadem.</span>
+        <span class="fcard-meta"><span>N-22</span><span>Vrstva 9</span><span>Ověřeno</span></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="dark sec-riskmap" id="riskmap" data-spread>
+  <div class="grain"></div>
+  <div class="sec-in">
+    <h2 class="h-m">Mapa rizik</h2>
+    <p class="lead">Každý nález skončí na jedné mapě. Čím tepleji, tím dřív vás potřebuje.</p>
+<div class="rm" data-riskmap>
+  <div class="rm-y">Závažnost</div>
+  <div class="rm-rows">
+<div class="rm-rowlab"><span class="sev s-critical"><i></i><i></i><i></i></span>Kritické</div>
+<div class="rm-rowlab"><span class="sev s-latent"><i></i><i></i><i></i></span>Podmíněné</div>
+<div class="rm-rowlab"><span class="sev s-noise"><i></i><i></i><i></i></span>Šum</div>
+  </div>
+  <div class="rm-grid">
+    <div class="rm-field" aria-hidden="true"></div>
+    <i class="rm-gv g1"></i><i class="rm-gv g2"></i><i class="rm-gh g1"></i><i class="rm-gh g2"></i>
+    <div class="rm-cell" style="grid-row:1;grid-column:1">
+<span class="rm-tag s-critical" data-fid="N-04" style="--dx:-1;--dy:4">Prohraný spor se subdodavatelem</span><span class="rm-tag s-critical" data-fid="N-10" style="--dx:3;--dy:3">Napadená subdoména</span>    </div>
+    <div class="rm-cell" style="grid-row:1;grid-column:2">
+<span class="rm-tag s-critical" data-fid="N-15" style="--dx:-1;--dy:4">Insolvence předchozí firmy</span>    </div>
+    <div class="rm-cell" style="grid-row:1;grid-column:3">
+    </div>
+    <div class="rm-cell" style="grid-row:2;grid-column:1">
+<span class="rm-tag s-latent" data-fid="N-11" style="--dx:-1;--dy:4">Chybí ochrana DMARC</span><span class="rm-tag s-latent" data-fid="N-13" style="--dx:3;--dy:3">Vystavený klíč k SMS bráně</span><span class="rm-tag s-latent" data-fid="N-16" style="--dx:-4;--dy:2">Společník s nedohledatelným vlastníkem</span>    </div>
+    <div class="rm-cell" style="grid-row:2;grid-column:2">
+<span class="rm-tag s-latent" data-fid="N-01" style="--dx:-1;--dy:4">Chybí závěrky 2023 a 2024</span><span class="rm-tag s-latent" data-fid="N-02" style="--dx:3;--dy:3">Rozdělená zakázka pro Dolní Lhotu</span><span class="rm-tag s-latent" data-fid="N-12" style="--dx:-4;--dy:2">Interní ceník s maržemi v indexu Googlu</span><span class="rm-tag s-latent" data-fid="N-14" style="--dx:0;--dy:1">Prošlý certifikát ISO 9001</span><span class="rm-tag s-latent" data-fid="N-18" style="--dx:4;--dy:0">Dar straně starosty a zakázka od města</span><span class="rm-tag s-latent" data-fid="N-20" style="--dx:-3;--dy:-1">Prokurista jako společník subdodavatele</span><span class="rm-tag s-latent" data-fid="N-22" style="--dx:1;--dy:-2">Smlouva zákazníka na Instagramu</span>    </div>
+    <div class="rm-cell" style="grid-row:2;grid-column:3">
+<span class="rm-tag s-latent" data-fid="N-07" style="--dx:-1;--dy:4">Vlna jednohvězdičkových recenzí</span><span class="rm-tag s-latent" data-fid="N-08" style="--dx:3;--dy:3">Našeptávač nabízí „podvod“</span>    </div>
+    <div class="rm-cell" style="grid-row:3;grid-column:1">
+<span class="rm-tag s-noise" data-fid="N-06" style="--dx:-1;--dy:4">Stará stránka o sporu v archivu</span><span class="rm-tag s-noise" data-fid="N-17" style="--dx:3;--dy:3">Půjčky od spřízněné firmy</span>    </div>
+    <div class="rm-cell" style="grid-row:3;grid-column:2">
+<span class="rm-tag s-noise" data-fid="N-03" style="--dx:-1;--dy:4">Vrácená část dotace</span><span class="rm-tag s-noise" data-fid="N-19" style="--dx:3;--dy:3">Další firmy jednatele</span><span class="rm-tag s-noise" data-fid="N-21" style="--dx:-4;--dy:2">Recenze: pozdní výplaty</span>    </div>
+    <div class="rm-cell" style="grid-row:3;grid-column:3">
+<span class="rm-tag s-noise" data-fid="N-05" style="--dx:-1;--dy:4">Článek o hluku z roku 2019</span><span class="rm-tag s-noise" data-fid="N-09" style="--dx:3;--dy:3">ChatGPT plete firmu s předchozí</span>    </div>
+  </div>
+  <div class="rm-cols">
+<div class="rm-collab">Specialista za den</div>
+<div class="rm-collab">Zvědavec za hodinu</div>
+<div class="rm-collab">Kdokoli za minutu</div>
+  </div>
+  <div class="rm-x">Jak snadno to kdo najde</div>
+</div>  </div>
+</section>
+
+<section class="paper sec-panels">
+  <div class="sec-in panels">
+    <div class="panel">
+      <h2 class="h-m">Co je v pořádku</h2>
+      <p class="lead-s">Tady jsme hledali a nic škodlivého nenašli.</p>
+      <dl class="ok-list">
+<div><dt><span class="tnum">1</span> Rejstříky a úřady</dt><dd><ul><li>Firma sama není v insolvenčním rejstříku.</li><li>Není vedena jako nespolehlivý plátce DPH.</li><li>Není na sankčních seznamech EU, OSN, Spojeného království ani USA.</li><li>V rozhodnutích úřadů (ochrana spotřebitele, hospodářská soutěž, ochrana osobních údajů) jsme firmu nenašli.</li></ul></dd></div>
+<div><dt><span class="tnum">2</span> Soudy</dt><dd><ul><li>Kromě sporu v nálezu N-04 žádná další veřejná rozhodnutí soudů, ani u propojených firem z vrstvy 8.</li></ul></dd></div>
+<div><dt><span class="tnum">3</span> Média</dt><dd><ul><li>Za poslední tři roky šest článků, všechny neutrální nebo pozitivní.</li><li>Archiv starých verzí webu neobsahuje kromě nálezů N-06 a N-15 nic dalšího.</li></ul></dd></div>
+<div><dt><span class="tnum">4</span> Recenze a diskuze</dt><dd><ul><li>Průměr 4,6 z 212 recenzí na Googlu. Bez vlny v nálezu N-07 by to bylo 4,8.</li><li>Firmy.cz: 4,7 z 58 hodnocení. Trustpilot bez záznamu.</li></ul></dd></div>
+<div><dt><span class="tnum">5</span> Vyhledávání a AI</dt><dd><ul><li>Gemini a Perplexity popisují firmu správně.</li><li>Z prvních deseti výsledků Googlu u názvu firmy je sedm vlastních nebo pozitivních.</li></ul></dd></div>
+<div><dt><span class="tnum">6</span> Technická stopa a bezpečnost</dt><dd><ul><li>Hlavní web má platný certifikát HTTPS a aktuální redakční systém.</li><li>Záznamy SPF a DKIM jsou nastavené správně.</li><li>Žádné zaměnitelné domény ani falešné profily vydávající se za firmu jsme nenašli.</li></ul></dd></div>
+<div><dt><span class="tnum">7</span> Rozpor slova a činu</dt><dd><ul><li>Počet dokončených zakázek na webu odpovídá referencím.</li><li>Uváděné reference jsou dohledatelné a zákazníci existují.</li></ul></dd></div>
+<div><dt><span class="tnum">8</span> Propojení</dt><dd><ul><li>Žádná z propojených firem není ke dni prověrky v insolvenci ani na sankčních seznamech; předchozí firma z nálezu N-15 je vymazaná od roku 2019.</li><li>Kromě nálezu N-18 jsme nenašli žádnou další vazbu na politickou stranu, hnutí ani úřad.</li></ul></dd></div>
+<div><dt><span class="tnum">9</span> Lidé a procesy</dt><dd><ul><li>Pracovní inzeráty za poslední dva roky neprozrazují vnitřní systémy ani způsob schvalování plateb.</li><li>Na webu jsou jen obecné kontaktní adresy, žádné jmenné adresy, ze kterých by šla odvodit šablona adres.</li></ul></dd></div>
+      </dl>
+    </div>
+    <div class="panel panel-2">
+      <h2 class="h-m">Co jsme nedělali</h2>
+      <ul class="not-list"><li>Nepoužili jsme uniklé databáze, dark web ani nakoupená data.</li><li>Nehledali jsme lidi podle fotografie a nepoužili jsme rozpoznávání obličejů.</li><li>Nepřihlašovali jsme se do cizích účtů, nevytvářeli falešné profily a nevydávali se za nikoho.</li><li>Netestovali jsme aktivně vaše systémy. Technická část je pasivní: jen veřejné záznamy domény a webu. Vystavený klíč jsme nezkoušeli a jeho hodnotu jsme nikam nezapsali.</li><li>Osoby jsme zpracovali jen v jejich veřejných rolích z rejstříků (jednatel, prokurista, společník) a přes jejich další firmy, bez soukromí a bez trestních věcí.</li><li>Neprověřovali jsme zaměstnance ani nikoho, kdo nedal písemný souhlas.</li></ul>
+      <p class="limits">Report ukazuje, co bylo veřejně dohledatelné ke dni prověrky a jak to jde spojit dohromady. Hledali jsme v kolech, dokud další kolo nepřineslo nic nového; co jsme nenašli, přesto může existovat. Propojení firem, rolí a peněz jsou signály s důkazem, ne obvinění. Internet i rejstříky se mění, proto doporučujeme kontrolu zopakovat před jednáním s investorem.</p>
+      <a class="btn btn-dark" href="../../files/MUCSIA_report_vzor_CZ.pdf" download>Stáhnout vzorový report (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<div hidden data-details>
+  <template data-detail="N-01">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Špína na firmu</span>
+        <span class="sev s-latent"><i></i><i></i><i></i>Podmíněné</span>
+        <span class="fc-find f-hour"><i></i><i></i><i></i>Zvědavec za hodinu</span>
+        <span class="det-id tnum">N-01</span>
+      </header>
+      <h3>Ve sbírce listin chybí účetní závěrky za roky 2023 a 2024</h3>
+      <dl class="det-grid">
+        <div><dt>Zjištění</dt><dd>Poslední zveřejněná závěrka je za rok 2022. Zákon ukládá zveřejnit ji do 12 měsíců po konci účetního období, takže dvě chybí. Investor si sbírku listin otevře mezi prvními a v souvislosti s nálezy N-16 a N-17 bude chtít vědět, proč nejsou vidět čísla právě z let, kdy do firmy vstoupil nový společník a přišly půjčky.</dd></div>
+        <div><dt>Útočná linka</dt><dd class="attack">Firma dva roky nezveřejnila čísla, zrovna od doby, kdy přišly cizí peníze. Co tají?</dd></div>
+<div><dt>Doporučení</dt><dd>Doplnit obě závěrky do sbírky listin a v podkladech pro investora je mít jako první dokument, spolu s přehledem vkladů a půjček z nálezů N-16 a N-17. <span class="dl dl-month"><i></i>Tento měsíc</span></dd></div>        <div><dt>Jistota</dt><dd><span class="cert c-verified"></span>Ověřeno</dd></div>
+        <div><dt>Vrstva</dt><dd><span class="tnum">1</span> Rejstříky a úřady</dd></div>
+        <div class="wide"><dt>Důkazy</dt><dd><ul class="ev-list"><li><span class="tnum">D-01</span> Seznam listin: poslední závěrka je za rok 2022<br><span class="ev-src">Obchodní rejstřík, sbírka listin, or.justice.cz/ias/ui/vypis-sl-firma?subjektId=000000, pořízeno 15. 9. 2026 10:12</span></li></ul></dd></div>
+<div class="wide resp"><dt>Připravená odpověď</dt><dd><p class="resp-q">Když se zeptají: Proč ve sbírce listin chybí vaše závěrky za dva roky?</p><p class="resp-a">Byla to administrativní chyba při změně účetní firmy v roce 2023. Obě závěrky byly řádně sestavené a do sbírky listin jsme je doplnili [datum doplnění]. Rádi je předložíme i s komentářem.</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-02">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Politické riziko</span>
+        <span class="sev s-latent"><i></i><i></i><i></i>Podmíněné</span>
+        <span class="fc-find f-hour"><i></i><i></i><i></i>Zvědavec za hodinu</span>
+        <span class="det-id tnum">N-02</span>
+      </header>
+      <h3>Zakázka pro Městský úřad Dolní Lhota rozdělená na dvě objednávky těsně pod hranicí soutěže</h3>
+      <dl class="det-grid">
+        <div><dt>Zjištění</dt><dd>V registru smluv jsou dvě objednávky Městského úřadu Dolní Lhota z roku 2024 na opravu střechy radnice: 19 500 EUR a 19 000 EUR, podepsané tři týdny po sobě, se stejným předmětem. Vnitřní směrnice města, která je také veřejná, ukládá od 20 000 EUR oslovit více uchazečů. Rozdělení není samo o sobě nezákonné, ale vypadá jako obcházení pravidel a spolu s nálezem N-18 dostává jiný rozměr.</dd></div>
+        <div><dt>Útočná linka</dt><dd class="attack">Zakázku od města dostali bez soutěže, stačilo ji rozseknout na dvě objednávky.</dd></div>
+<div><dt>Doporučení</dt><dd>Připravit doložitelné vysvětlení, proč byla oprava rozdělená (etapy, havarijní stav, změna rozsahu), a mít ho i pro investora. Do budoucna u veřejných zadavatelů trvat na jedné smlouvě a soutěži, i když ji zadavatel nevyžaduje. <span class="dl dl-month"><i></i>Tento měsíc</span></dd></div>        <div><dt>Jistota</dt><dd><span class="cert c-verified"></span>Ověřeno</dd></div>
+        <div><dt>Vrstva</dt><dd><span class="tnum">1</span> Rejstříky a úřady</dd></div>
+        <div class="wide"><dt>Důkazy</dt><dd><ul class="ev-list"><li><span class="tnum">D-02</span> Dvě objednávky města na opravu střechy radnice (19 500 a 19 000 EUR)<br><span class="ev-src">Registr smluv, smlouvy.gov.cz/smlouva/000000, pořízeno 15. 9. 2026 11:05</span></li><li><span class="tnum">D-03</span> Směrnice města o zakázkách malého rozsahu, hranice 20 000 EUR<br><span class="ev-src">Web města Dolní Lhota, dolni-lhota.example/urad/smernice, pořízeno 15. 9. 2026 11:20</span></li></ul></dd></div>
+<div class="wide resp"><dt>Připravená odpověď</dt><dd><p class="resp-q">Když se zeptají: Město Dolní Lhota vám zadalo opravu radnice bez soutěže, na dvě objednávky pod limitem. Domluvili jste se?</p><p class="resp-a">Rozsah opravy určilo město: první objednávka řešila havarijní část střechy, druhá zbytek po odkrytí krytiny [doplnit podle skutečnosti]. Obě ceny odpovídají [položkovému rozpočtu], který rádi předložíme. O způsobu zadání rozhoduje zadavatel, my jsme podali nabídku na jeho výzvu.</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-03">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Politické riziko</span>
+        <span class="sev s-noise"><i></i><i></i><i></i>Šum</span>
+        <span class="fc-find f-hour"><i></i><i></i><i></i>Zvědavec za hodinu</span>
+        <span class="det-id tnum">N-03</span>
+      </header>
+      <h3>Dotace na vzdělávání zaměstnanců: vrácení 5 000 EUR za nesplněný ukazatel</h3>
+      <dl class="det-grid">
+        <div><dt>Zjištění</dt><dd>Ve veřejné evidenci dotací je projekt vzdělávání zaměstnanců z let 2022 až 2023 za 44 000 EUR se záznamem o vrácení 5 000 EUR, protože firma nesplnila počet proškolených osob. Jde o běžnou korekci, ne o sankci za podvod, ale bez vysvětlení to vypadá jako problém s dotacemi.</dd></div>
+        <div><dt>Útočná linka</dt><dd class="attack">Museli vracet dotaci. Podívejte se, na co všechno berou veřejné peníze.</dd></div>
+<div><dt>Doporučení</dt><dd>Mít připravené jednovětné vysvětlení (odchod dvou zaměstnanců během projektu) a doklad o vrácení. Nic dalšího nedělat. <span class="dl dl-quarter"><i></i>Tento kvartál</span></dd></div>        <div><dt>Jistota</dt><dd><span class="cert c-verified"></span>Ověřeno</dd></div>
+        <div><dt>Vrstva</dt><dd><span class="tnum">1</span> Rejstříky a úřady</dd></div>
+        <div class="wide"><dt>Důkazy</dt><dd><ul class="ev-list"><li><span class="tnum">D-04</span> Záznam o projektu a o vrácení 5 000 EUR<br><span class="ev-src">Veřejná evidence dotací (CEDR), cedr.mfcr.cz, pořízeno 15. 9. 2026 12:02</span></li></ul></dd></div>
+      </dl>
+    </article>
+  </template>
+  <template data-detail="N-04">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Dohledatelná kauza</span>
+        <span class="sev s-critical"><i></i><i></i><i></i>Kritické</span>
+        <span class="fc-find f-day"><i></i><i></i><i></i>Specialista za den</span>
+        <span class="det-id tnum">N-04</span>
+      </header>
+      <h3>Pravomocný rozsudek: prohraný spor o 48 000 EUR</h3>
+      <dl class="det-grid">
+        <div><dt>Zjištění</dt><dd>Krajský soud v roce 2023 pravomocně rozhodl, že firma musí společnosti Střešní krytiny Gama s.r.o. doplatit 48 000 EUR za provedené práce i s úroky. Rozsudek je veřejně dohledatelný v databázi soudních rozhodnutí a v archivu webu je k němu i vaše dřívější veřejné vyjádření (nález N-06).</dd></div>
+        <div><dt>Útočná linka</dt><dd class="attack">Neplatí subdodavatelům. Musel je k tomu donutit až soud.</dd></div>
+<div><dt>Doporučení</dt><dd>Připravit krátké pravdivé vysvětlení a doklad o úhradě. Pro investora mít přehled všech sporů za posledních pět let i s výsledkem, včetně sporů propojených firem z vrstvy 8. <span class="dl dl-week"><i></i>Tento týden</span></dd></div>        <div><dt>Jistota</dt><dd><span class="cert c-verified"></span>Ověřeno</dd></div>
+        <div><dt>Vrstva</dt><dd><span class="tnum">2</span> Soudy</dd></div>
+        <div class="wide"><dt>Důkazy</dt><dd><ul class="ev-list"><li><span class="tnum">D-05</span> Rozsudek krajského soudu z roku 2023<br><span class="ev-src">Databáze soudních rozhodnutí, rozhodnuti.justice.cz/rozhodnuti/000000, pořízeno 16. 9. 2026 09:05</span></li><li><span class="tnum">D-06</span> Stav řízení a nabytí právní moci<br><span class="ev-src">InfoSoud, infosoud.justice.cz, pořízeno 16. 9. 2026 09:22</span></li></ul></dd></div>
+<div class="wide resp"><dt>Připravená odpověď</dt><dd><p class="resp-q">Když se zeptají: Soud vám nařídil doplatit subdodavateli 1,2 milionu. Neplatíte svým partnerům?</p><p class="resp-a">Šlo o spor o kvalitu prací na jedné zakázce z roku 2021. Soud rozhodl jinak, než jsme čekali. Rozsudek jsme respektovali a celou částku jsme uhradili [datum úhrady]. S ostatními subdodavateli spolupracujeme dlouhodobě a bez sporů, reference rádi poskytneme.</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-05">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Mediální riziko</span>
+        <span class="sev s-noise"><i></i><i></i><i></i>Šum</span>
+        <span class="fc-find f-minute"><i></i><i></i><i></i>Kdokoli za minutu</span>
+        <span class="det-id tnum">N-05</span>
+      </header>
+      <h3>Článek regionálního webu z roku 2019 o stížnostech sousedů na hluk</h3>
+      <dl class="det-grid">
+        <div><dt>Zjištění</dt><dd>Krátký článek o nočních pracích na stavbě v Horní Lhotě. Je na první stránce Googlu u názvu firmy, ale je starý a firma v něm dostala prostor k vyjádření.</dd></div>
+        <div><dt>Útočná linka</dt><dd class="attack">Staví i v noci a na sousedy nehledí.</dd></div>
+<div><dt>Doporučení</dt><dd>Nové články a reference ho časem posunou níž. Nic dalšího nedělat. <span class="dl dl-quarter"><i></i>Tento kvartál</span></dd></div>        <div><dt>Jistota</dt><dd><span class="cert c-verified"></span>Ověřeno</dd></div>
+        <div><dt>Vrstva</dt><dd><span class="tnum">3</span> Média</dd></div>
+        <div class="wide"><dt>Důkazy</dt><dd><ul class="ev-list"><li><span class="tnum">D-07</span> Článek z 12. 6. 2019 o nočních pracích<br><span class="ev-src">Regionální zpravodajský web, zpravy-region.example/2019/06/hluk-na-stavbe, pořízeno 16. 9. 2026 11:40</span></li></ul></dd></div>
+      </dl>
+    </article>
+  </template>
+  <template data-detail="N-06">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Dohledatelná kauza</span>
+        <span class="sev s-noise"><i></i><i></i><i></i>Šum</span>
+        <span class="fc-find f-day"><i></i><i></i><i></i>Specialista za den</span>
+        <span class="det-id tnum">N-06</span>
+      </header>
+      <h3>Archiv webu uchovává vaši stránku z roku 2021, kde subdodavatele nazýváte „nesolidním partnerem“</h3>
+      <dl class="det-grid">
+        <div><dt>Zjištění</dt><dd>Ve Wayback Machine je verze vašeho webu z listopadu 2021 se sekcí Aktuality, kde firma popisuje spor se společností Střešní krytiny Gama s.r.o., nazývá ji „nesolidním partnerem“ a píše, že „u soudu uspějeme“. Stránku jste v roce 2023 smazali, spor jste prohráli (nález N-04). Archiv text uchovává dál a kdokoli ho může postavit vedle rozsudku.</dd></div>
+        <div><dt>Útočná linka</dt><dd class="attack">Nejdřív partnera veřejně pomlouvali, pak s ním prohráli u soudu. Stránku smazali, archiv ne.</dd></div>
+<div><dt>Doporučení</dt><dd>Nesnažit se archiv mazat, na žádost o odstranění reaguje pomalu a upozorní na ni. Mít vysvětlení připravené spolu s odpovědí k nálezu N-04 a do budoucna o sporech veřejně nepsat. <span class="dl dl-quarter"><i></i>Tento kvartál</span></dd></div>        <div><dt>Jistota</dt><dd><span class="cert c-verified"></span>Ověřeno</dd></div>
+        <div><dt>Vrstva</dt><dd><span class="tnum">3</span> Média</dd></div>
+        <div class="wide"><dt>Důkazy</dt><dd><ul class="ev-list"><li><span class="tnum">D-08</span> Stránka Aktuality z listopadu 2021 s textem o sporu<br><span class="ev-src">Wayback Machine, web.archive.org/web/2021*/vzorovafirma.example/aktuality, pořízeno 16. 9. 2026 12:15</span></li></ul></dd></div>
+      </dl>
+    </article>
+  </template>
+  <template data-detail="N-07">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Špína na firmu</span>
+        <span class="sev s-latent"><i></i><i></i><i></i>Podmíněné</span>
+        <span class="fc-find f-minute"><i></i><i></i><i></i>Kdokoli za minutu</span>
+        <span class="det-id tnum">N-07</span>
+      </header>
+      <h3>Vlna devíti jednohvězdičkových recenzí na Googlu během tří týdnů</h3>
+      <dl class="det-grid">
+        <div><dt>Zjištění</dt><dd>V březnu 2025 přibylo 9 recenzí s jednou hvězdičkou, 6 z nich z účtů bez jiné aktivity a bez textu. Průměr klesl ze 4,8 na 4,6. Vzorec odpovídá cílenému útoku, prokázat to ale nejde.</dd></div>
+        <div><dt>Útočná linka</dt><dd class="attack">Podívejte se na jejich recenze. Lidé je hodnotí čím dál hůř.</dd></div>
+<div><dt>Doporučení</dt><dd>Nahlásit podezřelé recenze Googlu jako porušení pravidel a na skutečné odpovědět. Požádat spokojené zákazníky z posledního roku o hodnocení. <span class="dl dl-month"><i></i>Tento měsíc</span></dd></div>        <div><dt>Jistota</dt><dd><span class="cert c-probable"></span>Pravděpodobné</dd></div>
+        <div><dt>Vrstva</dt><dd><span class="tnum">4</span> Recenze a diskuze</dd></div>
+        <div class="wide"><dt>Důkazy</dt><dd><ul class="ev-list"><li><span class="tnum">D-09</span> Přehled recenzí s daty přidání<br><span class="ev-src">Google Maps, profil firmy, maps.google.com/?cid=000000, pořízeno 17. 9. 2026 08:47</span></li><li><span class="tnum">D-10</span> Šest profilů recenzentů bez další aktivity<br><span class="ev-src">Google Maps, profily recenzentů, maps.google.com/contrib/000000, pořízeno 17. 9. 2026 09:10</span></li></ul></dd></div>
+<div class="wide resp"><dt>Připravená odpověď</dt><dd><p class="resp-q">Když se zeptají: Proč máte v poslední době tolik špatných recenzí?</p><p class="resp-a">Většina těch hodnocení přišla během tří týdnů z účtů bez jakékoli další aktivity, proto jsme je nahlásili Googlu. Na každou skutečnou zkušenost odpovídáme jménem. Za poslední rok jsme dokončili [počet] zakázek a ověření zákazníci nás hodnotí průměrně [hodnocení].</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-08">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Mediální riziko</span>
+        <span class="sev s-latent"><i></i><i></i><i></i>Podmíněné</span>
+        <span class="fc-find f-minute"><i></i><i></i><i></i>Kdokoli za minutu</span>
+        <span class="det-id tnum">N-08</span>
+      </header>
+      <h3>Našeptávač Googlu u názvu firmy nabízí slovo „podvod“</h3>
+      <dl class="det-grid">
+        <div><dt>Zjištění</dt><dd>Při psaní názvu firmy nabízí Google mezi prvními pěti návrhy „vzorová firma podvod“ a „vzorová firma insolvence“. Návrhy nejspíš vznikly z hledání po vlně recenzí (nález N-07) a z dotazů na insolvenci předchozí firmy (nález N-15).</dd></div>
+        <div><dt>Útočná linka</dt><dd class="attack">Stačí začít psát jejich jméno a Google sám nabídne slovo podvod.</dd></div>
+<div><dt>Doporučení</dt><dd>Vyřešit příčiny (N-07, N-15) a posílit obsah, který lidé hledají: reference, případové studie, recenze. Návrh lze nahlásit Googlu, bez změny příčin se ale vrací. <span class="dl dl-month"><i></i>Tento měsíc</span></dd></div>        <div><dt>Jistota</dt><dd><span class="cert c-verified"></span>Ověřeno</dd></div>
+        <div><dt>Vrstva</dt><dd><span class="tnum">5</span> Vyhledávání a AI</dd></div>
+        <div class="wide"><dt>Důkazy</dt><dd><ul class="ev-list"><li><span class="tnum">D-11</span> Návrhy našeptávače při psaní názvu firmy<br><span class="ev-src">Google, anonymní okno, google.cz, pořízeno 17. 9. 2026 14:25</span></li></ul></dd></div>
+<div class="wide resp"><dt>Připravená odpověď</dt><dd><p class="resp-q">Když se zeptají: Když se napíše vaše jméno, Google nabízí slovo podvod. Proč?</p><p class="resp-a">Našeptávač ukazuje, co lidé hledají, ne co je pravda. Souvisí to s vlnou anonymních hodnocení, kterou jsme nahlásili, a s insolvencí jiné společnosti z roku 2017, kterou vysvětlujeme otevřeně. Rádi vám dáme kontakty na zákazníky z posledních let.</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-09">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Mediální riziko</span>
+        <span class="sev s-noise"><i></i><i></i><i></i>Šum</span>
+        <span class="fc-find f-minute"><i></i><i></i><i></i>Kdokoli za minutu</span>
+        <span class="det-id tnum">N-09</span>
+      </header>
+      <h3>ChatGPT tvrdí, že firma prošla v roce 2017 insolvencí. Spojuje ji s předchozí firmou</h3>
+      <dl class="det-grid">
+        <div><dt>Zjištění</dt><dd>Na dotaz „Co víte o firmě Vzorová firma s.r.o.?“ odpověděl ChatGPT, že firma „prošla v roce 2017 insolvencí“. Insolvencí prošla zaniklá společnost Střechy Vzor s.r.o. se stejným jednatelem a adresou (nález N-15), ne vaše firma. Odpověď je věcně chybná, ale má reálný základ, a proto se hůř vyvrací. Gemini a Perplexity odpovídají správně.</dd></div>
+        <div><dt>Útočná linka</dt><dd class="attack">I umělá inteligence ví, že už jednou zkrachovali.</dd></div>
+<div><dt>Doporučení</dt><dd>Zveřejnit na webu přesné údaje o firmě (IČO, rok vzniku, vedení) ve strukturované podobě a chybu nahlásit přes zpětnou vazbu v ChatGPT. Za měsíc zkontrolovat znovu. Bez vysvětlení k nálezu N-15 se odpověď bude vracet. <span class="dl dl-quarter"><i></i>Tento kvartál</span></dd></div>        <div><dt>Jistota</dt><dd><span class="cert c-verified"></span>Ověřeno</dd></div>
+        <div><dt>Vrstva</dt><dd><span class="tnum">5</span> Vyhledávání a AI</dd></div>
+        <div class="wide"><dt>Důkazy</dt><dd><ul class="ev-list"><li><span class="tnum">D-12</span> Odpověď ChatGPT na dotaz o firmě<br><span class="ev-src">ChatGPT, výchozí model ke dni pořízení, chatgpt.com, pořízeno 17. 9. 2026 15:03</span></li></ul></dd></div>
+      </dl>
+    </article>
+  </template>
+  <template data-detail="N-10">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Špína na firmu</span>
+        <span class="sev s-critical"><i></i><i></i><i></i>Kritické</span>
+        <span class="fc-find f-day"><i></i><i></i><i></i>Specialista za den</span>
+        <span class="det-id tnum">N-10</span>
+      </header>
+      <h3>Zapomenutá subdoména přesměrovává na podvodný web</h3>
+      <dl class="det-grid">
+        <div><dt>Zjištění</dt><dd>Adresa test.vzorovafirma.example běží na staré instalaci WordPressu z roku 2019 a část odkazů vede na stránku s falešnou výhrou. Je to známka napadení. Kdo na odkaz narazí, uvidí jméno firmy vedle podvodu.</dd></div>
+        <div><dt>Útočná linka</dt><dd class="attack">Jejich web šíří podvody. Jak můžou chránit data zákazníků, když neuhlídají ani vlastní web?</dd></div>
+<div><dt>Doporučení</dt><dd>Subdoménu okamžitě vypnout, zjistit, jak k napadení došlo, a projít ostatní subdomény. Potom požádat Google o nové posouzení adresy. <span class="dl dl-week"><i></i>Tento týden</span></dd></div>        <div><dt>Jistota</dt><dd><span class="cert c-verified"></span>Ověřeno</dd></div>
+        <div><dt>Vrstva</dt><dd><span class="tnum">6</span> Technická stopa a bezpečnost</dd></div>
+        <div class="wide"><dt>Důkazy</dt><dd><ul class="ev-list"><li><span class="tnum">D-13</span> Přesměrování ze subdomény na podvodnou stránku<br><span class="ev-src">Pasivní kontrola webu, test.vzorovafirma.example, pořízeno 18. 9. 2026 09:44</span></li><li><span class="tnum">D-14</span> Upozornění na škodlivý obsah adresy<br><span class="ev-src">Google Safe Browsing, zpráva o transparentnosti, transparencyreport.google.com/safe-browsing/search, pořízeno 18. 9. 2026 09:51</span></li></ul></dd></div>
+<div class="wide resp"><dt>Připravená odpověď</dt><dd><p class="resp-q">Když se zeptají: Z vaší domény vedou odkazy na podvodné stránky. Jak je to možné?</p><p class="resp-a">Šlo o starou testovací adresu, kterou jsme přestali používat v roce 2019 a zapomněli ji vypnout. Útočník ji zneužil. Po zjištění jsme ji [datum] vypnuli a prověřili ostatní systémy. [Doplnit po ověření se správcem webu: zda na ní byla data zákazníků.]</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-11">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Páka k vydírání</span>
+        <span class="sev s-latent"><i></i><i></i><i></i>Podmíněné</span>
+        <span class="fc-find f-day"><i></i><i></i><i></i>Specialista za den</span>
+        <span class="det-id tnum">N-11</span>
+      </header>
+      <h3>Doména nemá ochranu proti podvrženým e-mailům (DMARC)</h3>
+      <dl class="det-grid">
+        <div><dt>Zjištění</dt><dd>Kdokoli může poslat e-mail, který vypadá, jako by přišel z adresy @vzorovafirma.example, třeba falešnou fakturu s jiným číslem účtu. Záznam SPF je nastavený, DMARC chybí. Vaše identita se tak dá použít proti vašim odběratelům i proti vám.</dd></div>
+        <div><dt>Útočná linka</dt><dd class="attack">„Dobrý den, zasíláme fakturu. Od tohoto měsíce prosím plaťte na náš nový účet.“</dd></div>
+<div><dt>Doporučení</dt><dd>Nastavit DMARC nejdřív v režimu sledování a po dvou týdnech ho zpřísnit. Upozornit účetní a klíčové odběratele, že změnu účtu vždy ověřujete telefonem. <span class="dl dl-month"><i></i>Tento měsíc</span></dd></div>        <div><dt>Jistota</dt><dd><span class="cert c-verified"></span>Ověřeno</dd></div>
+        <div><dt>Vrstva</dt><dd><span class="tnum">6</span> Technická stopa a bezpečnost</dd></div>
+        <div class="wide"><dt>Důkazy</dt><dd><ul class="ev-list"><li><span class="tnum">D-15</span> Chybějící záznam DMARC, nastavený SPF<br><span class="ev-src">Veřejné záznamy DNS domény, _dmarc.vzorovafirma.example, pořízeno 18. 9. 2026 10:20</span></li></ul></dd></div>
+<div class="wide resp"><dt>Připravená odpověď</dt><dd><p class="resp-q">Když se zeptají: Dostali jsme z vaší adresy fakturu s jiným číslem účtu. Poslali jste ji vy?</p><p class="resp-a">Neposlali. Číslo účtu nikdy neměníme e-mailem, každou změnu ověřujeme telefonicky. Doménu jsme proti podvrženým zprávám zabezpečili [datum]. Pokud vám podobná zpráva přijde, volejte prosím [telefon].</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-12">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Páka k vydírání</span>
+        <span class="sev s-latent"><i></i><i></i><i></i>Podmíněné</span>
+        <span class="fc-find f-hour"><i></i><i></i><i></i>Zvědavec za hodinu</span>
+        <span class="det-id tnum">N-12</span>
+      </header>
+      <h3>Interní ceník s maržemi z roku 2025 leží v otevřené složce webu a Google ho má v indexu</h3>
+      <dl class="det-grid">
+        <div><dt>Zjištění</dt><dd>Ve složce vzorovafirma.example/dokumenty/ je soubor „Cenik-interni-marze-2025.pdf“ s nákupními cenami, maržemi podle typu zakázky a slevami pro tři největší odběratele. Složka má zapnutý výpis a Google soubor nabízí na dotaz s názvem firmy a slovem „ceník“. Kdo ho má, může tlačit na cenu, oslovit vaše odběratele s lepší nabídkou, nebo vám tím vyhrožovat.</dd></div>
+        <div><dt>Útočná linka</dt><dd class="attack">Známe vaše marže i slevy pro vaše největší zákazníky. Domluvíme se, nebo to dostanou oni?</dd></div>
+<div><dt>Doporučení</dt><dd>Soubor okamžitě odstranit, vypnout výpis složky a požádat Google o odstranění z indexu. Zjistit, kdo měl do složky přístup a zda tam nejsou další soubory. Zvážit, zda odběratele informovat dřív, než se to dozví odjinud. <span class="dl dl-week"><i></i>Tento týden</span></dd></div>        <div><dt>Jistota</dt><dd><span class="cert c-verified"></span>Ověřeno</dd></div>
+        <div><dt>Vrstva</dt><dd><span class="tnum">6</span> Technická stopa a bezpečnost</dd></div>
+        <div class="wide"><dt>Důkazy</dt><dd><ul class="ev-list"><li><span class="tnum">D-16</span> Výpis složky dokumenty/ se souborem ceníku<br><span class="ev-src">Web firmy, vzorovafirma.example/dokumenty/, pořízeno 18. 9. 2026 10:48</span></li><li><span class="tnum">D-17</span> Soubor ve výsledcích Googlu na dotaz „vzorová firma ceník“<br><span class="ev-src">Google, anonymní okno, google.cz, pořízeno 18. 9. 2026 10:55</span></li></ul></dd></div>
+<div class="wide resp"><dt>Připravená odpověď</dt><dd><p class="resp-q">Když se zeptají: Váš interní ceník s maržemi byl veřejně dostupný. Jak to?</p><p class="resp-a">Soubor se do veřejné složky webu dostal omylem při [okolnost] a byl tam [doba]. Po zjištění jsme ho [datum] odstranili i z vyhledávačů. Obchodní podmínky s našimi odběrateli se nemění a každému z nich jsme situaci vysvětlili osobně.</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-13">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Páka k vydírání</span>
+        <span class="sev s-latent"><i></i><i></i><i></i>Podmíněné</span>
+        <span class="fc-find f-day"><i></i><i></i><i></i>Specialista za den</span>
+        <span class="det-id tnum">N-13</span>
+      </header>
+      <h3>Ve veřejném repozitáři bývalého dodavatele webu je přístupový klíč k vaší SMS bráně</h3>
+      <dl class="det-grid">
+        <div><dt>Zjištění</dt><dd>Veřejný repozitář na GitHubu, který patří bývalému dodavateli vašeho webu, obsahuje konfigurační soubor s klíčem k účtu u SMS brány vedeným na firmu. Soubor je v historii repozitáře od roku 2022. Zjišťovali jsme jen stav vystavení: klíč jsme nezkoušeli a jeho hodnotu nikam nezapisujeme. Nevíme, zda dosud platí; pokud ano, může kdokoli rozesílat SMS vaším jménem a na váš účet.</dd></div>
+        <div><dt>Útočná linka</dt><dd class="attack">Vašim zákazníkům přijde SMS z vašeho čísla s odkazem na falešnou platbu. A vy ji zaplatíte.</dd></div>
+<div><dt>Doporučení</dt><dd>Klíč u provozovatele SMS brány ihned zneplatnit a vydat nový, zkontrolovat historii odeslaných zpráv a fakturaci za poslední rok. Požádat dodavatele o odstranění souboru z historie repozitáře a projít, jaké další přístupy měl. <span class="dl dl-week"><i></i>Tento týden</span></dd></div>        <div><dt>Jistota</dt><dd><span class="cert c-verified"></span>Ověřeno</dd></div>
+        <div><dt>Vrstva</dt><dd><span class="tnum">6</span> Technická stopa a bezpečnost</dd></div>
+        <div class="wide"><dt>Důkazy</dt><dd><ul class="ev-list"><li><span class="tnum">D-18</span> Konfigurační soubor s klíčem v historii repozitáře (jen stav vystavení, bez hodnoty)<br><span class="ev-src">GitHub, veřejný repozitář bývalého dodavatele, github.com/000000/000000/commit/000000, pořízeno 18. 9. 2026 11:30</span></li></ul></dd></div>
+<div class="wide resp"><dt>Připravená odpověď</dt><dd><p class="resp-q">Když se zeptají: Zákazníkům chodí SMS vaším jménem s odkazem na platbu. Poslali jste je?</p><p class="resp-a">Neposlali. Zjistili jsme, že přístupový klíč k naší SMS bráně zůstal v souboru bývalého dodavatele, a [datum] jsme ho zneplatnili. Platby nikdy nevyžadujeme přes SMS. Pokud vám taková zpráva přišla, nic neplaťte a zavolejte nám na [telefon].</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-14">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Dohledatelná kauza</span>
+        <span class="sev s-latent"><i></i><i></i><i></i>Podmíněné</span>
+        <span class="fc-find f-hour"><i></i><i></i><i></i>Zvědavec za hodinu</span>
+        <span class="det-id tnum">N-14</span>
+      </header>
+      <h3>Web uvádí certifikaci ISO 9001, certifikát vypršel v březnu 2024</h3>
+      <dl class="det-grid">
+        <div><dt>Zjištění</dt><dd>Na úvodní stránce i v nabídkách je logo ISO 9001. Podle veřejného registru certifikačního orgánu platnost skončila 14. 3. 2024 a nebyla obnovena. Ve výběrovém řízení to jde napadnout jednou větou.</dd></div>
+        <div><dt>Útočná linka</dt><dd class="attack">Chlubí se certifikátem, který už dva roky nemají. Co dalšího si přikrášlují?</dd></div>
+<div><dt>Doporučení</dt><dd>Logo z webu a nabídek hned odstranit, nebo certifikaci obnovit. Projít i ostatní tvrzení na webu, například ocenění, počty zakázek a rok vzniku (nález N-15). <span class="dl dl-month"><i></i>Tento měsíc</span></dd></div>        <div><dt>Jistota</dt><dd><span class="cert c-verified"></span>Ověřeno</dd></div>
+        <div><dt>Vrstva</dt><dd><span class="tnum">7</span> Rozpor slova a činu</dd></div>
+        <div class="wide"><dt>Důkazy</dt><dd><ul class="ev-list"><li><span class="tnum">D-19</span> Stav certifikátu ISO 9001: platnost skončila<br><span class="ev-src">Veřejný registr certifikačního orgánu, certifikacni-organ.example/registr/000000, pořízeno 19. 9. 2026 08:58</span></li></ul></dd></div>
+<div class="wide resp"><dt>Připravená odpověď</dt><dd><p class="resp-q">Když se zeptají: Uvádíte ISO 9001, ale certifikát vám vypršel. Proč?</p><p class="resp-a">Máte pravdu. Certifikát jsme po změně certifikačního orgánu neobnovili včas a logo zůstalo na webu omylem. Opravili jsme to [datum]. Postupy řízení kvality používáme dál a recertifikace je naplánovaná na [termín].</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-15">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Spojené tečky</span>
+        <span class="sev s-critical"><i></i><i></i><i></i>Kritické</span>
+        <span class="fc-find f-hour"><i></i><i></i><i></i>Zvědavec za hodinu</span>
+        <span class="det-id tnum">N-15</span>
+      </header>
+      <h3>Předchozí firma se stejným jednatelem skončila v roce 2017 v konkursu</h3>
+      <dl class="det-grid">
+        <div><dt>Zjištění</dt><dd>Společnost Střechy Vzor s.r.o. (vymazána 2019) měla stejného jednatele a stejnou adresu provozovny jako vaše firma. V roce 2017 na ni byl prohlášen konkurs, věřitelé přihlásili 4,120 000 EUR a dostali 11 %. Doména vzorovafirma.example vznikla v roce 2016, archiv webu z téhož roku ukazuje logo „Střechy Vzor, nyní Vzorová firma s.r.o.“ a dnešní web uvádí „na trhu od roku 2006“, tedy rok vzniku zaniklé firmy. Spojení najde každý, kdo zadá jméno jednatele do insolvenčního rejstříku. Vzorec „byznys pokračuje, dluhy zůstaly“ je přesně to, co investor a věřitelé hledají.</dd></div>
+        <div><dt>Útočná linka</dt><dd class="attack">Jednou už nechali věřitele s dluhy čtyři miliony a druhý den jeli dál pod novým jménem. Proč by to neudělali znovu?</dd></div>
+<div><dt>Doporučení</dt><dd>Připravit pro investora úplný a pravdivý popis: co se v roce 2017 stalo, co z předchozí firmy přešlo (lidé, zákazníci, značka), co ne (dluhy, závazky), a zda byl přechod v insolvenčním řízení zpochybněn. Text „na trhu od roku 2006“ upravit na „navazujeme na zkušenosti od roku 2006, jako s.r.o. od roku 2011“. Nic nezakrývat, spojení je dohledatelné za hodinu. <span class="dl dl-week"><i></i>Tento týden</span></dd></div>        <div><dt>Jistota</dt><dd><span class="cert c-verified"></span>Ověřeno</dd></div>
+        <div><dt>Vrstva</dt><dd><span class="tnum">8</span> Propojení</dd></div>
+        <div class="wide"><dt>Důkazy</dt><dd><ul class="ev-list"><li><span class="tnum">D-20</span> Konkurs Střechy Vzor s.r.o. (2017), přihlášené pohledávky 4,120 000 EUR<br><span class="ev-src">Insolvenční rejstřík (ISIR), isir.justice.cz/isir/ueu/evidence_upadcu_detail.do?id=000000, pořízeno 16. 9. 2026 15:10</span></li><li><span class="tnum">D-21</span> Výpis zaniklé firmy: stejný jednatel a adresa provozovny<br><span class="ev-src">Obchodní rejstřík, úplný výpis, or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=000001, pořízeno 16. 9. 2026 15:25</span></li><li><span class="tnum">D-22</span> Web z roku 2016 s logem „Střechy Vzor, nyní Vzorová firma s.r.o.“ a dnešní text „na trhu od roku 2006“<br><span class="ev-src">Wayback Machine a web firmy, web.archive.org/web/2016*/vzorovafirma.example, pořízeno 16. 9. 2026 15:40</span></li></ul></dd></div>
+<div class="wide resp"><dt>Připravená odpověď</dt><dd><p class="resp-q">Když se zeptají: Vaše předchozí firma zkrachovala a věřitelé dostali jedenáct procent. Teď podnikáte pod novým jménem. Proč vám věřit?</p><p class="resp-a">Střechy Vzor s.r.o. skončila v roce 2017 po [důvod, doplnit podle skutečnosti]. Vzorová firma s.r.o. vznikla už v roce 2011 jako samostatná společnost a převzala značku, lidi a zákazníky, ne závazky; insolvenční správce převod nezpochybnil [doplnit podle spisu]. Od té doby firma platí včas, což doložíme závěrkami a referencemi subdodavatelů.</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-16">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Kudy tečou peníze</span>
+        <span class="sev s-latent"><i></i><i></i><i></i>Podmíněné</span>
+        <span class="fc-find f-day"><i></i><i></i><i></i>Specialista za den</span>
+        <span class="det-id tnum">N-16</span>
+      </header>
+      <h3>Nový společník z roku 2024 má nedohledatelného vlastníka</h3>
+      <dl class="det-grid">
+        <div><dt>Zjištění</dt><dd>V březnu 2024 vstoupila do firmy společnost Alfa Invest Holding s.r.o. s vkladem 120 000 EUR za podíl 25 %. Podle rejstříku vznikla v listopadu 2023, nemá zaměstnance ani web a jejím jediným společníkem je zahraniční společnost z jurisdikce, kde vlastníci nejsou veřejně evidovaní. V evidenci skutečných majitelů je zapsán jen náhradní skutečný majitel, tedy vedení firmy, ne skutečný vlastník. Je to signál, ne obvinění; budoucí investor a jeho banka to ale při kontrole původu peněz uvidí jako první.</dd></div>
+        <div><dt>Útočná linka</dt><dd class="attack">Tři miliony od čtyřměsíční schránky, jejíhož majitele nikdo nezná. Odkud ty peníze jsou?</dd></div>
+<div><dt>Doporučení</dt><dd>Získat od společníka doložení skutečného vlastníka a původu vkladu (výpis, prohlášení, smlouva) dřív, než se zeptá investor nebo banka. Pokud společník doložit nechce, počítat s tím, že to vstup investora zastaví. <span class="dl dl-month"><i></i>Tento měsíc</span></dd></div>        <div><dt>Jistota</dt><dd><span class="cert c-verified"></span>Ověřeno</dd></div>
+        <div><dt>Vrstva</dt><dd><span class="tnum">8</span> Propojení</dd></div>
+        <div class="wide"><dt>Důkazy</dt><dd><ul class="ev-list"><li><span class="tnum">D-23</span> Zápis navýšení kapitálu a nového společníka (březen 2024)<br><span class="ev-src">Obchodní rejstřík, úplný výpis, or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=000000, pořízeno 17. 9. 2026 16:05</span></li><li><span class="tnum">D-24</span> Náhradní skutečný majitel u Alfa Invest Holding s.r.o.<br><span class="ev-src">Evidence skutečných majitelů, esm.justice.cz/ias/issm/rejstrik-osoba?subjektId=000002, pořízeno 17. 9. 2026 16:30</span></li></ul></dd></div>
+<div class="wide resp"><dt>Připravená odpověď</dt><dd><p class="resp-q">Když se zeptají: Kdo stojí za vaším společníkem Alfa Invest Holding a odkud přišly tři miliony?</p><p class="resp-a">Společník vstoupil do firmy v roce 2024 na základě [okolnost]. Jeho skutečným vlastníkem je [role a doklad], vklad pochází z [původ, doloženo]. Podklady jsme předali [komu] a jsou k dispozici pro kontrolu původu prostředků.</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-17">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Kudy tečou peníze</span>
+        <span class="sev s-noise"><i></i><i></i><i></i>Šum</span>
+        <span class="fc-find f-day"><i></i><i></i><i></i>Specialista za den</span>
+        <span class="det-id tnum">N-17</span>
+      </header>
+      <h3>Půjčky 85 000 EUR od spřízněné firmy bez uvedeného úroku a splatnosti</h3>
+      <dl class="det-grid">
+        <div><dt>Zjištění</dt><dd>Příloha závěrky za rok 2022 uvádí závazky 85 000 EUR vůči společnosti Vzorová správa nemovitostí s.r.o., kde je stejný jednatel jediným společníkem, bez údaje o úroku a splatnosti. Zpráva o vztazích mezi propojenými osobami ve sbírce listin chybí. Mezi firmami stejných lidí je to běžné, ale bez dokumentace to vypadá jako přelévání peněz.</dd></div>
+        <div><dt>Útočná linka</dt><dd class="attack">Firma žije z půjček od vlastní schránky. Jak to vypadá s penězi doopravdy?</dd></div>
+<div><dt>Doporučení</dt><dd>Doplnit smlouvy o půjčkách s úrokem a splatností, sestavit zprávu o vztazích za chybějící roky a mít pro investora přehled všech transakcí mezi propojenými firmami. <span class="dl dl-quarter"><i></i>Tento kvartál</span></dd></div>        <div><dt>Jistota</dt><dd><span class="cert c-verified"></span>Ověřeno</dd></div>
+        <div><dt>Vrstva</dt><dd><span class="tnum">8</span> Propojení</dd></div>
+        <div class="wide"><dt>Důkazy</dt><dd><ul class="ev-list"><li><span class="tnum">D-25</span> Příloha závěrky 2022: závazky 85 000 EUR vůči Vzorová správa nemovitostí s.r.o.<br><span class="ev-src">Obchodní rejstřík, sbírka listin, or.justice.cz/ias/ui/vypis-sl-detail?dokument=000000, pořízeno 17. 9. 2026 17:02</span></li></ul></dd></div>
+      </dl>
+    </article>
+  </template>
+  <template data-detail="N-18">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Spojené tečky</span>
+        <span class="sev s-latent"><i></i><i></i><i></i>Podmíněné</span>
+        <span class="fc-find f-hour"><i></i><i></i><i></i>Zvědavec za hodinu</span>
+        <span class="det-id tnum">N-18</span>
+      </header>
+      <h3>Spřízněná firma darovala straně starosty 2 000 EUR v roce zakázky od města</h3>
+      <dl class="det-grid">
+        <div><dt>Zjištění</dt><dd>Výroční finanční zpráva Strany pro region za rok 2024 uvádí dar 2 000 EUR od společnosti Vzorová správa nemovitostí s.r.o. (stejný jednatel). Starosta Dolní Lhoty byl zvolen za tuto stranu a město ve stejném roce zadalo vaší firmě opravu střechy radnice na dvě objednávky bez soutěže (nález N-02). Každá věc zvlášť je legální a veřejná. Dohromady tvoří příběh „dar za zakázku“, který se dá napsat za hodinu a vyvrací se roky.</dd></div>
+        <div><dt>Útočná linka</dt><dd class="attack">Firma dá straně padesát tisíc, starosta za tu stranu rozdělí zakázku pod limit. Náhoda?</dd></div>
+<div><dt>Doporučení</dt><dd>Sestavit časovou osu: kdy byl dar, kdy výzva, kdy objednávky, kdo o zadání rozhodl. Pokud dar předcházel zakázce, mít vysvětlení připravené hned. Do budoucna žádné dary stranám a hnutím z firem, které se ucházejí o veřejné zakázky. <span class="dl dl-month"><i></i>Tento měsíc</span></dd></div>        <div><dt>Jistota</dt><dd><span class="cert c-verified"></span>Ověřeno</dd></div>
+        <div><dt>Vrstva</dt><dd><span class="tnum">8</span> Propojení</dd></div>
+        <div class="wide"><dt>Důkazy</dt><dd><ul class="ev-list"><li><span class="tnum">D-26</span> Výroční finanční zpráva Strany pro region za rok 2024, seznam dárců<br><span class="ev-src">Úřad pro dohled nad hospodařením politických stran a politických hnutí, udhpsh.cz, pořízeno 18. 9. 2026 13:15</span></li><li><span class="tnum">D-27</span> Starosta Dolní Lhoty zvolen za Stranu pro region (volby 2022)<br><span class="ev-src">Výsledky voleb (volby.cz), volby.cz, pořízeno 18. 9. 2026 13:30</span></li></ul></dd></div>
+<div class="wide resp"><dt>Připravená odpověď</dt><dd><p class="resp-q">Když se zeptají: Darovali jste straně starosty a od města jste pak dostali zakázku bez soutěže. Jak to souvisí?</p><p class="resp-a">Nesouvisí. Dar poskytla [firma] v [měsíc] na [účel], zakázku zadalo město po [výzvě] v [měsíc] a o zadání rozhodoval [orgán]. Časovou osu i doklady rádi předložíme. Aby podobné otázky nevznikaly, od [datum] naše firmy politickým stranám nepřispívají.</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-19">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Kdo za tím stojí</span>
+        <span class="sev s-noise"><i></i><i></i><i></i>Šum</span>
+        <span class="fc-find f-hour"><i></i><i></i><i></i>Zvědavec za hodinu</span>
+        <span class="det-id tnum">N-19</span>
+      </header>
+      <h3>Jednatel je podle rejstříku ve statutárních orgánech čtyř dalších firem, jedna je v likvidaci</h3>
+      <dl class="det-grid">
+        <div><dt>Zjištění</dt><dd>Veřejný rejstřík ukazuje jednatele v roli statutára nebo společníka ve čtyřech dalších společnostech: správa nemovitostí (nálezy N-17 a N-18), dvě firmy bez činnosti a jedna v likvidaci od roku 2025 bez přihlášených věřitelů. Jmenovec ve statutárním orgánu firmy s exekucemi má jiné datum narození a jiné IČO, ten vypadl. Nic z toho není problém sám o sobě, ale investor to bude chtít mít vysvětlené na jedné straně.</dd></div>
+        <div><dt>Útočná linka</dt><dd class="attack">Pět firem, jedna v likvidaci, a všechny pod jedním člověkem. Která je ta, ze které se platí?</dd></div>
+<div><dt>Doporučení</dt><dd>Připravit jednu stranu s přehledem všech firem jednatele, jejich účelem a stavem, včetně vyloučeného jmenovce. Firmy bez činnosti zvážit zrušit. <span class="dl dl-quarter"><i></i>Tento kvartál</span></dd></div>        <div><dt>Jistota</dt><dd><span class="cert c-verified"></span>Ověřeno</dd></div>
+        <div><dt>Vrstva</dt><dd><span class="tnum">8</span> Propojení</dd></div>
+        <div class="wide"><dt>Důkazy</dt><dd><ul class="ev-list"><li><span class="tnum">D-28</span> Role jednatele ve čtyřech dalších firmách, vyloučený jmenovec (jiné datum narození, jiné IČO)<br><span class="ev-src">Obchodní rejstřík, hledání podle osoby, or.justice.cz/ias/ui/rejstrik-$osoba, pořízeno 18. 9. 2026 14:05</span></li></ul></dd></div>
+      </dl>
+    </article>
+  </template>
+  <template data-detail="N-20">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Kdo za tím stojí</span>
+        <span class="sev s-latent"><i></i><i></i><i></i>Podmíněné</span>
+        <span class="fc-find f-hour"><i></i><i></i><i></i>Zvědavec za hodinu</span>
+        <span class="det-id tnum">N-20</span>
+      </header>
+      <h3>Prokurista firmy je společníkem subdodavatele, který pracoval na zakázce pro Dolní Lhotu</h3>
+      <dl class="det-grid">
+        <div><dt>Zjištění</dt><dd>Prokurista zapsaný v rejstříku od roku 2022 je zároveň polovičním společníkem společnosti Klempířství Beta s.r.o. Ta je v příloze objednávky v registru smluv uvedena jako poddodavatel klempířských prací na radnici v Dolní Lhotě (nález N-02). Ve výroční zprávě ani ve zprávě o vztazích o tom není zmínka. Není to zakázané, ale je to nepřiznaný střet zájmů, který investor i zadavatel vidí jako riziko.</dd></div>
+        <div><dt>Útočná linka</dt><dd class="attack">Člověk, který za firmu podepisuje, si posílá zakázky do vlastní firmy.</dd></div>
+<div><dt>Doporučení</dt><dd>Střet zájmů písemně přiznat (vnitřní pravidlo, evidence spřízněných dodavatelů, schvalování jednatelem) a doložit, že ceny subdodavatele odpovídají trhu. Do zprávy o vztazích uvést všechny transakce s Klempířstvím Beta. <span class="dl dl-month"><i></i>Tento měsíc</span></dd></div>        <div><dt>Jistota</dt><dd><span class="cert c-verified"></span>Ověřeno</dd></div>
+        <div><dt>Vrstva</dt><dd><span class="tnum">8</span> Propojení</dd></div>
+        <div class="wide"><dt>Důkazy</dt><dd><ul class="ev-list"><li><span class="tnum">D-29</span> Prokurista jako poloviční společník Klempířství Beta s.r.o.<br><span class="ev-src">Obchodní rejstřík, úplný výpis, or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=000003, pořízeno 18. 9. 2026 14:40</span></li><li><span class="tnum">D-30</span> Příloha objednávky: seznam poddodavatelů<br><span class="ev-src">Registr smluv, smlouvy.gov.cz/smlouva/000000, pořízeno 18. 9. 2026 14:55</span></li></ul></dd></div>
+<div class="wide resp"><dt>Připravená odpověď</dt><dd><p class="resp-q">Když se zeptají: Váš prokurista vlastní firmu, které dáváte subdodávky. Kdo na tom vydělává?</p><p class="resp-a">Ano, prokurista je společníkem Klempířství Beta. Subdodávky pro ni schvaluje výhradně jednatel, ceny odpovídají [srovnání s dalšími nabídkami, doloženo] a od [datum] máme písemné pravidlo pro spřízněné dodavatele. Za poslední tři roky šlo o [počet] zakázek v celkové hodnotě [částka].</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-21">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Špína na firmu</span>
+        <span class="sev s-noise"><i></i><i></i><i></i>Šum</span>
+        <span class="fc-find f-hour"><i></i><i></i><i></i>Zvědavec za hodinu</span>
+        <span class="det-id tnum">N-21</span>
+      </header>
+      <h3>Recenze zaměstnavatele: tři zmínky o pozdních výplatách</h3>
+      <dl class="det-grid">
+        <div><dt>Zjištění</dt><dd>Na serveru s recenzemi zaměstnavatelů jsou z let 2023 a 2024 tři hodnocení, která shodně uvádějí, že výplaty chodily o několik dní později. Jsou staré a od té doby nic nepřibylo, ale investor, který řeší stabilitu firmy, je najde a spojí si je s půjčkami z nálezu N-17.</dd></div>
+        <div><dt>Útočná linka</dt><dd class="attack">Ani vlastním lidem neplatí včas. Jak jsou na tom s penězi?</dd></div>
+<div><dt>Doporučení</dt><dd>Pokud je to vyřešené, odpovědět pod recenzemi jménem firmy a mít pro investora doklad, že mzdy od roku 2024 chodí v termínu. Pokud ne, vyřešit to dřív, než se na to zeptá. <span class="dl dl-quarter"><i></i>Tento kvartál</span></dd></div>        <div><dt>Jistota</dt><dd><span class="cert c-verified"></span>Ověřeno</dd></div>
+        <div><dt>Vrstva</dt><dd><span class="tnum">9</span> Lidé a procesy</dd></div>
+        <div class="wide"><dt>Důkazy</dt><dd><ul class="ev-list"><li><span class="tnum">D-31</span> Tři recenze zaměstnavatele z let 2023 a 2024<br><span class="ev-src">Atmoskop.cz, atmoskop.cz/nazory-na-zamestnavatele/000000, pořízeno 19. 9. 2026 09:30</span></li></ul></dd></div>
+      </dl>
+    </article>
+  </template>
+  <template data-detail="N-22">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Páka k vydírání</span>
+        <span class="sev s-latent"><i></i><i></i><i></i>Podmíněné</span>
+        <span class="fc-find f-hour"><i></i><i></i><i></i>Zvědavec za hodinu</span>
+        <span class="det-id tnum">N-22</span>
+      </header>
+      <h3>Veřejný příspěvek pracovníka firmy na Instagramu ukazuje smlouvu se zákazníkem včetně adresy a ceny</h3>
+      <dl class="det-grid">
+        <div><dt>Zjištění</dt><dd>Na veřejném profilu pracovníka firmy je od června 2026 fotografie ze stavby, na které leží podepsaná smlouva o dílo: čitelné je jméno zákazníka, adresa rodinného domu a cena 56 000 EUR. Příspěvek má označení firmy a najde ho každý, kdo si projde profily označené u firemního účtu. Jde o únik osobních údajů zákazníka, který jde použít proti firmě i proti němu. Pracovníka neuvádíme, jde o chybu procesu, ne o prověrku člověka.</dd></div>
+        <div><dt>Útočná linka</dt><dd class="attack">Vaše firma vystavila na internet moji adresu a kolik jsem zaplatil. Buď to vyřešíme, nebo to řeším s úřadem.</dd></div>
+<div><dt>Doporučení</dt><dd>Požádat pracovníka o smazání příspěvku, zákazníka informovat a posoudit s advokátem oznamovací povinnost. Zavést jednoduché pravidlo pro fotky ze staveb (žádné dokumenty, SPZ ani tváře bez souhlasu) a projít profily označené u firemního účtu. <span class="dl dl-week"><i></i>Tento týden</span></dd></div>        <div><dt>Jistota</dt><dd><span class="cert c-verified"></span>Ověřeno</dd></div>
+        <div><dt>Vrstva</dt><dd><span class="tnum">9</span> Lidé a procesy</dd></div>
+        <div class="wide"><dt>Důkazy</dt><dd><ul class="ev-list"><li><span class="tnum">D-32</span> Příspěvek z června 2026 s fotografií smlouvy (uloženo se začerněnými údaji zákazníka)<br><span class="ev-src">Instagram, veřejný profil označený u firemního účtu, instagram.com/p/000000, pořízeno 19. 9. 2026 10:10</span></li></ul></dd></div>
+<div class="wide resp"><dt>Připravená odpověď</dt><dd><p class="resp-q">Když se zeptají: Na Instagramu vašeho zaměstnance byla vidět moje smlouva i adresa. Co s tím uděláte?</p><p class="resp-a">Máte pravdu a omlouváme se. Příspěvek byl smazán [datum], událost jsme posoudili s právním zástupcem [a oznámili úřadu, doplnit podle posouzení]. Zavedli jsme pravidlo, že ze staveb se nefotí žádné dokumenty. Rádi se s vámi sejdeme osobně.</p></dd></div>      </dl>
+    </article>
+  </template>
+</div>
+<dialog class="dlg" data-dialog>
+  <form method="dialog" class="dlg-close"><button type="submit" class="btn-ghost">Zavřít</button></form>
+  <div class="dlg-body" data-dialog-body></div>
+</dialog>
+</main>
+<footer class="ftr">
+  <div class="ftr-in">
+    <div class="ftr-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><defs></defs><path d="M6 60 A67.5 67.5 0 0 1 114 60 A67.5 67.5 0 0 1 6 60 Z" fill="none" stroke="#F5F4F7" stroke-width="11" stroke-linejoin="miter"/><path d="M43 60 A17 17 0 1 0 77 60 A17 17 0 1 0 43 60 Z M62.7 50.2 H68.9 A0.8 0.8 0 0 1 69.7 51 V55.4 A0.8 0.8 0 0 1 68.9 56.2 H62.7 A0.8 0.8 0 0 1 61.9 55.4 V51 A0.8 0.8 0 0 1 62.7 50.2 Z" fill="#F5F4F7" fill-rule="evenodd"/></svg></div>
+    <p class="ftr-line">Jen veřejné zdroje. Jen pasivní metody. Vždy to víte první.</p>
+    <nav class="ftr-nav" aria-label="Patička">
+      <a href="../../cs/ukazka/">Ukázka prověrky</a>
+      <a href="../../cs/kontakt/">Ozvěte se</a>
+      <a href="../../cs/zasady/">Zásady</a>
+      <a href="../../sample/" hreflang="en" lang="en">English</a>
+    </nav>
+  </div>
+</footer>
+<a class="bar" href="../../cs/kontakt/">Ozvěte se nám</a>
+<script src="../../static/site.js?v=ff111942fa" defer></script>
+</body>
+</html>

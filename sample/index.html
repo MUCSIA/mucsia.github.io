@@ -1,0 +1,771 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sample audit, MUCSIA</title>
+<meta name="description" content="A sample MUCSIA audit on a fictional company: findings, evidence, findability and the risk map.">
+<meta name="theme-color" content="#15102A">
+<meta name="referrer" content="no-referrer">
+<link rel="canonical" href="https://mucsia.github.io/sample/">
+<link rel="alternate" hreflang="en" href="https://mucsia.github.io/sample/">
+<link rel="alternate" hreflang="cs" href="https://mucsia.github.io/cs/ukazka/">
+<link rel="alternate" hreflang="x-default" href="https://mucsia.github.io/sample/">
+<link rel="icon" href="../static/img/mucsia-ikona.svg" type="image/svg+xml">
+<link rel="preload" href="../static/fonts/Archivo-w800-s80.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../static/fonts/Archivo-w400-s100.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.classList.add("js")</script>
+<link rel="stylesheet" href="../static/site.css?v=0013ce17ef">
+<meta property="og:title" content="Sample audit">
+<meta property="og:description" content="A sample MUCSIA audit on a fictional company: findings, evidence, findability and the risk map.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mucsia.github.io/sample/">
+<meta property="og:image" content="https://mucsia.github.io/static/img/og.png">
+<meta property="og:locale" content="en_GB">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"MUCSIA","url":"https://mucsia.github.io/","inLanguage":["en","cs"]}</script>
+</head>
+<body class="page-sample" data-endpoint="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="hdr" id="hdr">
+  <div class="hdr-in">
+    <a class="brand" href="../" aria-label="MUCSIA"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0.00 -1118.87 7929.15 1551.73"><defs></defs><g transform="translate(-123.48 -1577.8) scale(20.58)"><path d="M6 60 A67.5 67.5 0 0 1 114 60 A67.5 67.5 0 0 1 6 60 Z" fill="none" stroke="#F5F4F7" stroke-width="11" stroke-linejoin="miter"/><path d="M43 60 A17 17 0 1 0 77 60 A17 17 0 1 0 43 60 Z M62.7 50.2 H68.9 A0.8 0.8 0 0 1 69.7 51 V55.4 A0.8 0.8 0 0 1 68.9 56.2 H62.7 A0.8 0.8 0 0 1 61.9 55.4 V51 A0.8 0.8 0 0 1 62.7 50.2 Z" fill="#F5F4F7" fill-rule="evenodd"/></g><path d="M84.50048828125 0.0V-687.54345703125H403.10595703125L520.97705078125 -389.4326171875Q528.5205078125 -370.71533203125 538.118408203125 -342.7587890625Q547.71630859375 -314.80224609375 557.4990234375 -285.47607421875Q567.28173828125 -256.14990234375 574.564453125 -233.41064453125H581.564453125Q588.390625 -254.23681640625 597.945068359375 -282.06298828125Q607.49951171875 -309.88916015625 617.597412109375 -338.617431640625Q627.6953125 -367.345703125 635.6953125 -388.51953125L753.56640625 -687.54345703125H1063.36767578125V0.0H859.7392578125V-354.78515625Q859.7392578125 -376.1328125 860.2392578125 -402.02392578125Q860.7392578125 -427.9150390625 861.7392578125 -453.034423828125Q862.7392578125 -478.15380859375 863.19580078125 -496.41455078125H855.19580078125Q849.10888671875 -477.06689453125 840.293701171875 -450.904052734375Q831.478515625 -424.7412109375 822.663330078125 -399.121826171875Q813.84814453125 -373.50244140625 806.3046875 -354.78515625L662.23779296875 0.0H475.65234375L331.12890625 -354.78515625Q321.0419921875 -381.306640625 311.455078125 -408.2412109375Q301.8681640625 -435.17578125 294.552978515625 -458.47998046875Q287.23779296875 -481.7841796875 282.23779296875 -496.41455078125H274.23779296875Q275.23779296875 -482.24072265625 275.73779296875 -458.9365234375Q276.23779296875 -435.63232421875 276.73779296875 -408.69775390625Q277.23779296875 -381.76318359375 277.23779296875 -354.78515625V0.0Z M1661.9560546875 12.0Q1525.89111328125 12.0 1436.771728515625 -27.728271484375Q1347.65234375 -67.45654296875 1303.706787109375 -142.5869140625Q1259.76123046875 -217.71728515625 1259.76123046875 -323.6953125V-687.54345703125H1463.3896484375V-332.869140625Q1463.3896484375 -240.93408203125 1515.28125 -190.19482421875Q1567.1728515625 -139.45556640625 1661.9560546875 -139.45556640625Q1757.28271484375 -139.45556640625 1809.17431640625 -190.19482421875Q1861.06591796875 -240.93408203125 1861.06591796875 -332.869140625V-687.54345703125H2064.6943359375V-323.6953125Q2064.6943359375 -217.71728515625 2020.748779296875 -142.5869140625Q1976.80322265625 -67.45654296875 1887.640380859375 -27.728271484375Q1798.4775390625 12.0 1661.9560546875 12.0Z M2663.45654296875 12.0Q2519.02197265625 12.0 2422.84814453125 -28.5Q2326.67431640625 -69.0 2278.859130859375 -148.228271484375Q2231.0439453125 -227.45654296875 2231.0439453125 -344.0Q2231.0439453125 -514.54345703125 2341.76123046875 -607.04345703125Q2452.478515625 -699.54345703125 2664.0869140625 -699.54345703125Q2782.2607421875 -699.54345703125 2872.119384765625 -664.097900390625Q2961.97802734375 -628.65234375 3012.56494140625 -564.206787109375Q3063.15185546875 -499.76123046875 3063.15185546875 -412.3046875H2864.697265625Q2864.697265625 -454.6962890625 2839.1318359375 -485.207275390625Q2813.56640625 -515.71826171875 2767.80517578125 -532.1748046875Q2722.0439453125 -548.63134765625 2660.54345703125 -548.63134765625Q2589.23876953125 -548.63134765625 2539.9775390625 -524.489990234375Q2490.71630859375 -500.3486328125 2465.509521484375 -457.23974609375Q2440.302734375 -414.130859375 2440.302734375 -357.0V-332.0Q2440.302734375 -275.49951171875 2465.509521484375 -231.890625Q2490.71630859375 -188.28173828125 2539.390625 -163.596923828125Q2588.06494140625 -138.912109375 2658.28271484375 -138.912109375Q2724.41357421875 -138.912109375 2771.76171875 -154.596923828125Q2819.10986328125 -170.28173828125 2844.71875 -200.249267578125Q2870.32763671875 -230.216796875 2870.32763671875 -272.15185546875H3063.6083984375Q3063.6083984375 -187.23876953125 3014.880126953125 -123.06494140625Q2966.15185546875 -58.89111328125 2876.521484375 -23.445556640625Q2786.89111328125 12.0 2663.45654296875 12.0Z M3599.564453125 12.0Q3515.58642578125 12.0 3442.6953125 1.95654296875Q3369.80419921875 -8.0869140625 3315.0 -33.13037109375Q3260.19580078125 -58.173828125 3229.250244140625 -102.989013671875Q3198.3046875 -147.80419921875 3198.3046875 -216.80419921875Q3198.3046875 -218.80419921875 3198.3046875 -222.075927734375Q3198.3046875 -225.34765625 3199.3046875 -228.4345703125H3398.75927734375Q3397.75927734375 -224.4345703125 3397.531005859375 -220.021484375Q3397.302734375 -215.6083984375 3397.302734375 -210.7822265625Q3397.302734375 -180.32568359375 3420.49853515625 -162.727783203125Q3443.6943359375 -145.1298828125 3486.0859375 -138.031982421875Q3528.4775390625 -130.93408203125 3584.6083984375 -130.93408203125Q3608.173828125 -130.93408203125 3632.78271484375 -132.34716796875Q3657.3916015625 -133.76025390625 3680.315673828125 -137.401611328125Q3703.23974609375 -141.04296875 3721.47900390625 -147.869140625Q3739.71826171875 -154.6953125 3750.587890625 -165.47802734375Q3761.45751953125 -176.2607421875 3761.45751953125 -191.54345703125Q3761.45751953125 -213.19580078125 3738.5009765625 -225.706787109375Q3715.54443359375 -238.2177734375 3676.359619140625 -245.772216796875Q3637.1748046875 -253.32666015625 3588.533447265625 -259.23974609375Q3539.89208984375 -265.15283203125 3487.750732421875 -273.381103515625Q3435.609375 -281.609375 3386.968017578125 -296.109375Q3338.32666015625 -310.609375 3299.141845703125 -334.6962890625Q3259.95703125 -358.783203125 3237.00048828125 -396.641845703125Q3214.0439453125 -434.50048828125 3214.0439453125 -489.130859375Q3214.0439453125 -543.65234375 3241.663330078125 -583.36962890625Q3269.28271484375 -623.0869140625 3319.173828125 -648.858642578125Q3369.06494140625 -674.63037109375 3437.010498046875 -687.0869140625Q3504.9560546875 -699.54345703125 3585.06494140625 -699.54345703125Q3666.71728515625 -699.54345703125 3733.162841796875 -686.902099609375Q3799.6083984375 -674.2607421875 3847.314697265625 -648.80419921875Q3895.02099609375 -623.34765625 3920.683837890625 -584.673828125Q3946.3466796875 -546.0 3946.3466796875 -493.93505859375V-480.10888671875H3748.89208984375V-488.2177734375Q3748.89208984375 -509.130859375 3730.8701171875 -525.315673828125Q3712.84814453125 -541.50048828125 3678.36962890625 -551.228759765625Q3643.89111328125 -560.95703125 3594.6083984375 -560.95703125Q3535.6513671875 -560.95703125 3497.71630859375 -553.58740234375Q3459.78125 -546.2177734375 3441.770263671875 -533.43505859375Q3423.75927734375 -520.65234375 3423.75927734375 -505.45654296875Q3423.75927734375 -485.173828125 3446.7158203125 -473.34765625Q3469.67236328125 -461.521484375 3508.857177734375 -454.65185546875Q3548.0419921875 -447.7822265625 3596.683349609375 -441.869140625Q3645.32470703125 -435.9560546875 3697.466064453125 -427.771240234375Q3749.607421875 -419.58642578125 3798.248779296875 -405.858154296875Q3846.89013671875 -392.1298828125 3886.074951171875 -368.358154296875Q3925.259765625 -344.58642578125 3948.21630859375 -308.271240234375Q3971.1728515625 -271.9560546875 3971.1728515625 -218.869140625Q3971.1728515625 -136.15185546875 3923.270751953125 -85.206298828125Q3875.36865234375 -34.2607421875 3791.466552734375 -11.13037109375Q3707.564453125 12.0 3599.564453125 12.0Z M4129.50048828125 0.0V-687.54345703125H4333.12890625V0.0Z M4463.3046875 0.0 4801.32666015625 -687.54345703125H5027.67236328125L5365.6943359375 0.0H5145.435546875L5093.478515625 -110.1748046875H4724.5205078125L4673.10693359375 0.0ZM4792.67236328125 -259.2607421875H5025.32666015625L4962.71728515625 -399.0009765625Q4958.80419921875 -408.37060546875 4951.749755859375 -425.52294921875Q4944.6953125 -442.67529296875 4937.097412109375 -462.186279296875Q4929.49951171875 -481.697265625 4923.08642578125 -498.468994140625Q4916.67333984375 -515.24072265625 4913.49951171875 -523.3056640625H4906.04296875Q4898.67333984375 -504.93603515625 4889.075439453125 -481.10986328125Q4879.4775390625 -457.28369140625 4870.60791015625 -434.9140625Q4861.73828125 -412.54443359375 4855.28173828125 -398.54443359375Z" transform="translate(2563.46 0)" fill="#F5F4F7"/></svg></a>
+    <nav class="nav" aria-label="Main">
+      <a href="../sample/" aria-current="page">Sample audit</a>
+      <a href="../contact/">Get in touch</a>
+      <a class="lang" href="../cs/ukazka/" hreflang="cs" lang="cs" title="Čeština"><span class="cur">EN</span><span class="sep" aria-hidden="true">|</span><span>CZ</span></a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="dark sec-sample-head">
+  <div class="grain"></div>
+  <div class="sec-in">
+    <p class="badge">Sample on a fictional company</p>
+    <h1 class="h-xl">Sample audit</h1>
+    <p class="lead">The same console and the same report pages as a real audit, filled with a fictional company. Filter by how easily someone finds a finding and by what it could be used for.</p>
+    <p class="sample-meta tnum">22 findings, 9 layers, 5 rounds of search</p>
+  </div>
+</section>
+
+<section class="dark sec-console">
+  <div class="grain"></div>
+  <div class="sec-in">
+<div class="con" data-console data-mode="auto">
+  <div class="con-left">
+    <ol class="con-layers" aria-label="The audit runs until nothing new comes up">
+<li><i></i><span>Registers and authorities</span></li>
+<li><i></i><span>Courts</span></li>
+<li><i></i><span>Media</span></li>
+<li><i></i><span>Reviews and discussions</span></li>
+<li><i></i><span>Search and AI</span></li>
+<li><i></i><span>Technical footprint and security</span></li>
+<li><i></i><span>Words versus deeds</span></li>
+<li><i></i><span>Connections</span></li>
+<li><i></i><span>People and processes</span></li>
+    </ol>
+    <div class="con-counters">
+      <div class="cnt"><b class="tnum" data-cnt="sources">0</b><span>sources checked</span></div>
+      <div class="cnt"><b class="tnum" data-cnt="leads">0</b><span>open leads</span></div>
+      <div class="cnt"><span class="cnt-note" data-status data-start="Starting from the company ID" data-lead="New lead opens a new round" data-sat="Round brought nothing new. Saturated." data-rep="Findings go into the report">Starting from the company ID</span></div>
+    </div>
+  </div>
+  <div class="con-right">
+    <div class="con-stage" data-stage>
+      <article class="fc" data-card="0" data-cat="scandal">
+        <header><span class="fc-cat">Findable scandal</span><span class="fc-find f-day"><i></i><i></i><i></i>A specialist in a day</span></header>
+        <p class="fc-attack">They only pay subcontractors when a court makes them.</p>
+        <footer class="fc-ev"><span class="fc-evl">Evidence</span><span>Court decisions database</span><span class="tnum">15 Sep 2026 10:42</span><span class="fc-hash tnum">a91f 3c0e</span></footer>
+      </article>
+      <article class="fc" data-card="1" data-cat="media">
+        <header><span class="fc-cat">Media risk</span><span class="fc-find f-minute"><i></i><i></i><i></i>Anyone in a minute</span></header>
+        <p class="fc-attack">Even Google thinks the company is a fraud.</p>
+        <footer class="fc-ev"><span class="fc-evl">Evidence</span><span>Autocomplete, first page</span><span class="tnum">15 Sep 2026 11:05</span><span class="fc-hash tnum">7d2b e410</span></footer>
+      </article>
+      <article class="fc" data-card="2" data-cat="money">
+        <header><span class="fc-cat">Follow the money</span><span class="fc-find f-hour"><i></i><i></i><i></i>A curious person in an hour</span></header>
+        <p class="fc-attack">Their investor was founded two months before it invested.</p>
+        <footer class="fc-ev"><span class="fc-evl">Evidence</span><span>Public register, capital history</span><span class="tnum">16 Sep 2026 09:17</span><span class="fc-hash tnum">c3e8 5f71</span></footer>
+      </article>
+      <article class="fc" data-card="3" data-cat="leverage">
+        <header><span class="fc-cat">Leverage</span><span class="fc-find f-day"><i></i><i></i><i></i>A specialist in a day</span></header>
+        <p class="fc-attack">Their whole price list is one search away.</p>
+        <footer class="fc-ev"><span class="fc-evl">Evidence</span><span>Search index, exposed file</span><span class="tnum">16 Sep 2026 14:29</span><span class="fc-hash tnum">e51a 9b06</span></footer>
+      </article>
+      <article class="fc" data-card="4" data-cat="political">
+        <header><span class="fc-cat">Political exposure</span><span class="fc-find f-hour"><i></i><i></i><i></i>A curious person in an hour</span></header>
+        <p class="fc-attack">The council member who voted on the contract runs a company with their director.</p>
+        <footer class="fc-ev"><span class="fc-evl">Evidence</span><span>Council minutes, public register</span><span class="tnum">17 Sep 2026 08:51</span><span class="fc-hash tnum">48fd 12c7</span></footer>
+      </article>
+      <article class="fc" data-card="5" data-cat="people">
+        <header><span class="fc-cat">Who&#39;s behind it</span><span class="fc-find f-hour"><i></i><i></i><i></i>A curious person in an hour</span></header>
+        <p class="fc-attack">The same people were behind a company that went into liquidation.</p>
+        <footer class="fc-ev"><span class="fc-evl">Evidence</span><span>Public register, roles</span><span class="tnum">17 Sep 2026 15:36</span><span class="fc-hash tnum">0b7e d3a2</span></footer>
+      </article>
+      <article class="fc fc-struck" data-card="s" data-cat="dirt">
+        <header><span class="fc-cat">Dirt on the company</span><span class="fc-find f-hour"><i></i><i></i><i></i>A curious person in an hour</span></header>
+        <p class="fc-attack">The company owes wages to former staff.</p>
+        <p class="fc-reason">Namesake, different company ID</p>
+        <footer class="fc-ev"><span class="fc-evl">Evidence</span><span>Employer reviews</span><span class="tnum">16 Sep 2026 12:02</span><span class="fc-hash tnum">51c0 77e9</span></footer>
+      </article>
+    </div>
+    <div class="con-report" data-report aria-hidden="true">
+      <div class="rep-cover">
+        <div class="rep-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><defs><radialGradient id="mrg" cx="50%" cy="50%" r="50%"><stop offset="0.0" stop-color="#FFF7DA"/><stop offset="0.34" stop-color="#FFF7DA"/><stop offset="0.34" stop-color="#FFD84D"/><stop offset="0.58" stop-color="#FFD84D"/><stop offset="0.58" stop-color="#FF9A1F"/><stop offset="0.8" stop-color="#FF9A1F"/><stop offset="0.8" stop-color="#F0543A"/><stop offset="1.0" stop-color="#F0543A"/></radialGradient></defs><path d="M6 60 A67.5 67.5 0 0 1 114 60 A67.5 67.5 0 0 1 6 60 Z" fill="none" stroke="#F5F4F7" stroke-width="11" stroke-linejoin="miter"/><path d="M43 60 A17 17 0 1 0 77 60 A17 17 0 1 0 43 60 Z M62.7 50.2 H68.9 A0.8 0.8 0 0 1 69.7 51 V55.4 A0.8 0.8 0 0 1 68.9 56.2 H62.7 A0.8 0.8 0 0 1 61.9 55.4 V51 A0.8 0.8 0 0 1 62.7 50.2 Z" fill="url(#mrg)" fill-rule="evenodd"/></svg></div>
+        <div class="rep-txt"><b>Report</b><span>Confidential</span></div>
+      </div>
+    </div>
+  </div>
+</div>  </div>
+</section>
+
+<section class="paper sec-findings" id="findings">
+  <div class="sec-in">
+    <div class="verdict-box">
+      <h2 class="h-m">Summary for the owner</h2>
+      <p>The worst cell, a critical finding that anyone can find in a minute, is empty. Three critical issues will be found by anyone who spends an hour with the registers and a day with the archives. The greatest damage comes from connecting them: the earlier insolvency, loans from a related company, a shareholder with an untraceable owner and a party donation in the year of a municipal contract. Do six tasks this week.</p>
+    </div>
+    <div class="filters" data-filters>
+      <fieldset class="fset"><legend>Who finds it</legend>
+        <label class="chip"><input type="radio" name="find" value="" checked><span>All</span></label>
+<label class="chip"><input type="radio" name="find" value="minute"><span class="fc-find f-minute"><i></i><i></i><i></i>Anyone in a minute</span></label>
+<label class="chip"><input type="radio" name="find" value="hour"><span class="fc-find f-hour"><i></i><i></i><i></i>A curious person in an hour</span></label>
+<label class="chip"><input type="radio" name="find" value="day"><span class="fc-find f-day"><i></i><i></i><i></i>A specialist in a day</span></label>
+      </fieldset>
+      <fieldset class="fset"><legend>What it could be used for</legend>
+        <label class="chip"><input type="radio" name="cat" value="" checked><span>All</span></label>
+<label class="chip"><input type="radio" name="cat" value="media"><span>Media risk <b class="tnum">3</b></span></label>
+<label class="chip"><input type="radio" name="cat" value="political"><span>Political exposure <b class="tnum">2</b></span></label>
+<label class="chip"><input type="radio" name="cat" value="dirt"><span>Dirt on the company <b class="tnum">4</b></span></label>
+<label class="chip"><input type="radio" name="cat" value="scandal"><span>Findable scandal <b class="tnum">3</b></span></label>
+<label class="chip"><input type="radio" name="cat" value="dots"><span>Connected dots <b class="tnum">2</b></span></label>
+<label class="chip"><input type="radio" name="cat" value="money"><span>Follow the money <b class="tnum">2</b></span></label>
+<label class="chip"><input type="radio" name="cat" value="people"><span>Who&#39;s behind it <b class="tnum">2</b></span></label>
+<label class="chip"><input type="radio" name="cat" value="leverage"><span>Leverage <b class="tnum">4</b></span></label>
+      </fieldset>
+    </div>
+    <p class="filters-empty" data-empty hidden>No finding matches this filter.</p>
+    <div class="fgrid" data-fgrid>
+      <button type="button" class="fcard" data-find="hour" data-cat="dirt" data-sev="latent" data-open="N-01">
+        <span class="fcard-top"><span class="sev s-latent" title="Latent"><i></i><i></i><i></i></span><span class="fc-cat">Dirt on the company</span><span class="fc-find f-hour"><i></i><i></i><i></i>A curious person in an hour</span></span>
+        <span class="fcard-title">Financial statements for 2023 and 2024 are missing from the Collection of Deeds</span>
+        <span class="fcard-attack">The company has not published its numbers for two years, right since outside money came in. What is it hiding?</span>
+        <span class="fcard-meta"><span>N-01</span><span>Layer 1</span><span>Verified</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="hour" data-cat="political" data-sev="latent" data-open="N-02">
+        <span class="fcard-top"><span class="sev s-latent" title="Latent"><i></i><i></i><i></i></span><span class="fc-cat">Political exposure</span><span class="fc-find f-hour"><i></i><i></i><i></i>A curious person in an hour</span></span>
+        <span class="fcard-title">A contract for the Dolní Lhota Municipal Office split into two orders just below the tender threshold</span>
+        <span class="fcard-attack">They got the town&#39;s contract without a tender; all it took was cutting it into two orders.</span>
+        <span class="fcard-meta"><span>N-02</span><span>Layer 1</span><span>Verified</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="hour" data-cat="political" data-sev="noise" data-open="N-03">
+        <span class="fcard-top"><span class="sev s-noise" title="Noise"><i></i><i></i><i></i></span><span class="fc-cat">Political exposure</span><span class="fc-find f-hour"><i></i><i></i><i></i>A curious person in an hour</span></span>
+        <span class="fcard-title">Employee training subsidy: EUR 5,000 returned for an unmet indicator</span>
+        <span class="fcard-attack">They had to return a subsidy. Look at everything they take public money for.</span>
+        <span class="fcard-meta"><span>N-03</span><span>Layer 1</span><span>Verified</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="day" data-cat="scandal" data-sev="critical" data-open="N-04">
+        <span class="fcard-top"><span class="sev s-critical" title="Critical"><i></i><i></i><i></i></span><span class="fc-cat">Findable scandal</span><span class="fc-find f-day"><i></i><i></i><i></i>A specialist in a day</span></span>
+        <span class="fcard-title">Final judgment: a lost EUR 48,000 dispute with a subcontractor</span>
+        <span class="fcard-attack">They do not pay their subcontractors. It took a court to make them.</span>
+        <span class="fcard-meta"><span>N-04</span><span>Layer 2</span><span>Verified</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="minute" data-cat="media" data-sev="noise" data-open="N-05">
+        <span class="fcard-top"><span class="sev s-noise" title="Noise"><i></i><i></i><i></i></span><span class="fc-cat">Media risk</span><span class="fc-find f-minute"><i></i><i></i><i></i>Anyone in a minute</span></span>
+        <span class="fcard-title">A 2019 article on a regional news site about neighbours complaining of noise</span>
+        <span class="fcard-attack">They build at night and do not care about the neighbours.</span>
+        <span class="fcard-meta"><span>N-05</span><span>Layer 3</span><span>Verified</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="day" data-cat="scandal" data-sev="noise" data-open="N-06">
+        <span class="fcard-top"><span class="sev s-noise" title="Noise"><i></i><i></i><i></i></span><span class="fc-cat">Findable scandal</span><span class="fc-find f-day"><i></i><i></i><i></i>A specialist in a day</span></span>
+        <span class="fcard-title">The web archive keeps your 2021 page calling the subcontractor an “unreliable partner”</span>
+        <span class="fcard-attack">First they smeared a partner in public, then lost to them in court. They deleted the page; the archive did not.</span>
+        <span class="fcard-meta"><span>N-06</span><span>Layer 3</span><span>Verified</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="minute" data-cat="dirt" data-sev="latent" data-open="N-07">
+        <span class="fcard-top"><span class="sev s-latent" title="Latent"><i></i><i></i><i></i></span><span class="fc-cat">Dirt on the company</span><span class="fc-find f-minute"><i></i><i></i><i></i>Anyone in a minute</span></span>
+        <span class="fcard-title">A wave of nine one-star Google reviews within three weeks</span>
+        <span class="fcard-attack">Look at their reviews. People rate them worse and worse.</span>
+        <span class="fcard-meta"><span>N-07</span><span>Layer 4</span><span>Probable</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="minute" data-cat="media" data-sev="latent" data-open="N-08">
+        <span class="fcard-top"><span class="sev s-latent" title="Latent"><i></i><i></i><i></i></span><span class="fc-cat">Media risk</span><span class="fc-find f-minute"><i></i><i></i><i></i>Anyone in a minute</span></span>
+        <span class="fcard-title">Google autocomplete suggests the word “fraud” with the company name</span>
+        <span class="fcard-attack">Just start typing their name and Google itself suggests the word fraud.</span>
+        <span class="fcard-meta"><span>N-08</span><span>Layer 5</span><span>Verified</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="minute" data-cat="media" data-sev="noise" data-open="N-09">
+        <span class="fcard-top"><span class="sev s-noise" title="Noise"><i></i><i></i><i></i></span><span class="fc-cat">Media risk</span><span class="fc-find f-minute"><i></i><i></i><i></i>Anyone in a minute</span></span>
+        <span class="fcard-title">ChatGPT claims the company went through insolvency in 2017. It merges it with the predecessor company</span>
+        <span class="fcard-attack">Even artificial intelligence knows they went bust once.</span>
+        <span class="fcard-meta"><span>N-09</span><span>Layer 5</span><span>Verified</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="day" data-cat="dirt" data-sev="critical" data-open="N-10">
+        <span class="fcard-top"><span class="sev s-critical" title="Critical"><i></i><i></i><i></i></span><span class="fc-cat">Dirt on the company</span><span class="fc-find f-day"><i></i><i></i><i></i>A specialist in a day</span></span>
+        <span class="fcard-title">A forgotten subdomain redirects to a fraudulent website</span>
+        <span class="fcard-attack">Their website spreads scams. How can they protect customer data when they cannot even look after their own website?</span>
+        <span class="fcard-meta"><span>N-10</span><span>Layer 6</span><span>Verified</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="day" data-cat="leverage" data-sev="latent" data-open="N-11">
+        <span class="fcard-top"><span class="sev s-latent" title="Latent"><i></i><i></i><i></i></span><span class="fc-cat">Leverage</span><span class="fc-find f-day"><i></i><i></i><i></i>A specialist in a day</span></span>
+        <span class="fcard-title">The domain has no protection against spoofed e-mails (DMARC)</span>
+        <span class="fcard-attack">“Hello, please find our invoice attached. From this month on, please pay to our new account.”</span>
+        <span class="fcard-meta"><span>N-11</span><span>Layer 6</span><span>Verified</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="hour" data-cat="leverage" data-sev="latent" data-open="N-12">
+        <span class="fcard-top"><span class="sev s-latent" title="Latent"><i></i><i></i><i></i></span><span class="fc-cat">Leverage</span><span class="fc-find f-hour"><i></i><i></i><i></i>A curious person in an hour</span></span>
+        <span class="fcard-title">An internal 2025 price list with margins sits in an open folder on the website and Google has it indexed</span>
+        <span class="fcard-attack">We know your margins and the discounts for your biggest customers. Do we come to terms, or do they get it?</span>
+        <span class="fcard-meta"><span>N-12</span><span>Layer 6</span><span>Verified</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="day" data-cat="leverage" data-sev="latent" data-open="N-13">
+        <span class="fcard-top"><span class="sev s-latent" title="Latent"><i></i><i></i><i></i></span><span class="fc-cat">Leverage</span><span class="fc-find f-day"><i></i><i></i><i></i>A specialist in a day</span></span>
+        <span class="fcard-title">A public repository of your former web supplier contains an access key to your SMS gateway</span>
+        <span class="fcard-attack">Your customers get a text message from your number with a link to a fake payment. And you pay for it.</span>
+        <span class="fcard-meta"><span>N-13</span><span>Layer 6</span><span>Verified</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="hour" data-cat="scandal" data-sev="latent" data-open="N-14">
+        <span class="fcard-top"><span class="sev s-latent" title="Latent"><i></i><i></i><i></i></span><span class="fc-cat">Findable scandal</span><span class="fc-find f-hour"><i></i><i></i><i></i>A curious person in an hour</span></span>
+        <span class="fcard-title">The website shows ISO 9001 certification, the certificate expired in March 2024</span>
+        <span class="fcard-attack">They boast about a certificate they have not had for two years. What else are they embellishing?</span>
+        <span class="fcard-meta"><span>N-14</span><span>Layer 7</span><span>Verified</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="hour" data-cat="dots" data-sev="critical" data-open="N-15">
+        <span class="fcard-top"><span class="sev s-critical" title="Critical"><i></i><i></i><i></i></span><span class="fc-cat">Connected dots</span><span class="fc-find f-hour"><i></i><i></i><i></i>A curious person in an hour</span></span>
+        <span class="fcard-title">Predecessor company of the same director: bankrupt in 2017</span>
+        <span class="fcard-attack">They already left creditors with four million in debts once and carried on the next day under a new name. Why would they not do it again?</span>
+        <span class="fcard-meta"><span>N-15</span><span>Layer 8</span><span>Verified</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="day" data-cat="money" data-sev="latent" data-open="N-16">
+        <span class="fcard-top"><span class="sev s-latent" title="Latent"><i></i><i></i><i></i></span><span class="fc-cat">Follow the money</span><span class="fc-find f-day"><i></i><i></i><i></i>A specialist in a day</span></span>
+        <span class="fcard-title">The new shareholder from 2024 has an untraceable owner</span>
+        <span class="fcard-attack">Three million from a four-month-old shell whose owner nobody knows. Where does the money come from?</span>
+        <span class="fcard-meta"><span>N-16</span><span>Layer 8</span><span>Verified</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="day" data-cat="money" data-sev="noise" data-open="N-17">
+        <span class="fcard-top"><span class="sev s-noise" title="Noise"><i></i><i></i><i></i></span><span class="fc-cat">Follow the money</span><span class="fc-find f-day"><i></i><i></i><i></i>A specialist in a day</span></span>
+        <span class="fcard-title">Loans of EUR 85,000 from a related company with no stated interest or maturity</span>
+        <span class="fcard-attack">The company lives on loans from its own shell. What do the finances really look like?</span>
+        <span class="fcard-meta"><span>N-17</span><span>Layer 8</span><span>Verified</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="hour" data-cat="dots" data-sev="latent" data-open="N-18">
+        <span class="fcard-top"><span class="sev s-latent" title="Latent"><i></i><i></i><i></i></span><span class="fc-cat">Connected dots</span><span class="fc-find f-hour"><i></i><i></i><i></i>A curious person in an hour</span></span>
+        <span class="fcard-title">A related company donated EUR 2,000 to the mayor&#39;s party in the year of the municipal contract</span>
+        <span class="fcard-attack">The company gives the party fifty thousand, the mayor from that party splits the contract below the limit. A coincidence?</span>
+        <span class="fcard-meta"><span>N-18</span><span>Layer 8</span><span>Verified</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="hour" data-cat="people" data-sev="noise" data-open="N-19">
+        <span class="fcard-top"><span class="sev s-noise" title="Noise"><i></i><i></i><i></i></span><span class="fc-cat">Who&#39;s behind it</span><span class="fc-find f-hour"><i></i><i></i><i></i>A curious person in an hour</span></span>
+        <span class="fcard-title">According to the register, the managing director sits on the boards of four other companies, one in liquidation</span>
+        <span class="fcard-attack">Five companies, one in liquidation, all under one person. Which one is the money paid from?</span>
+        <span class="fcard-meta"><span>N-19</span><span>Layer 8</span><span>Verified</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="hour" data-cat="people" data-sev="latent" data-open="N-20">
+        <span class="fcard-top"><span class="sev s-latent" title="Latent"><i></i><i></i><i></i></span><span class="fc-cat">Who&#39;s behind it</span><span class="fc-find f-hour"><i></i><i></i><i></i>A curious person in an hour</span></span>
+        <span class="fcard-title">The company&#39;s proxy holder is a shareholder of a subcontractor that worked on the Dolní Lhota contract</span>
+        <span class="fcard-attack">The person who signs for the company sends contracts to their own firm.</span>
+        <span class="fcard-meta"><span>N-20</span><span>Layer 8</span><span>Verified</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="hour" data-cat="dirt" data-sev="noise" data-open="N-21">
+        <span class="fcard-top"><span class="sev s-noise" title="Noise"><i></i><i></i><i></i></span><span class="fc-cat">Dirt on the company</span><span class="fc-find f-hour"><i></i><i></i><i></i>A curious person in an hour</span></span>
+        <span class="fcard-title">Employer reviews: three mentions of late salaries</span>
+        <span class="fcard-attack">They do not even pay their own people on time. How are they doing financially?</span>
+        <span class="fcard-meta"><span>N-21</span><span>Layer 9</span><span>Verified</span></span>
+      </button>
+      <button type="button" class="fcard" data-find="hour" data-cat="leverage" data-sev="latent" data-open="N-22">
+        <span class="fcard-top"><span class="sev s-latent" title="Latent"><i></i><i></i><i></i></span><span class="fc-cat">Leverage</span><span class="fc-find f-hour"><i></i><i></i><i></i>A curious person in an hour</span></span>
+        <span class="fcard-title">A public Instagram post by a company worker shows a customer&#39;s contract, including address and price</span>
+        <span class="fcard-attack">Your company put my address and what I paid on the internet. Either we sort this out, or I take it to the authority.</span>
+        <span class="fcard-meta"><span>N-22</span><span>Layer 9</span><span>Verified</span></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="dark sec-riskmap" id="riskmap" data-spread>
+  <div class="grain"></div>
+  <div class="sec-in">
+    <h2 class="h-m">Risk map</h2>
+    <p class="lead">Every finding lands on one map. The warmer it is, the sooner it needs you.</p>
+<div class="rm" data-riskmap>
+  <div class="rm-y">Severity</div>
+  <div class="rm-rows">
+<div class="rm-rowlab"><span class="sev s-critical"><i></i><i></i><i></i></span>Critical</div>
+<div class="rm-rowlab"><span class="sev s-latent"><i></i><i></i><i></i></span>Latent</div>
+<div class="rm-rowlab"><span class="sev s-noise"><i></i><i></i><i></i></span>Noise</div>
+  </div>
+  <div class="rm-grid">
+    <div class="rm-field" aria-hidden="true"></div>
+    <i class="rm-gv g1"></i><i class="rm-gv g2"></i><i class="rm-gh g1"></i><i class="rm-gh g2"></i>
+    <div class="rm-cell" style="grid-row:1;grid-column:1">
+<span class="rm-tag s-critical" data-fid="N-04" style="--dx:-1;--dy:4">Lost dispute with a subcontractor</span><span class="rm-tag s-critical" data-fid="N-10" style="--dx:3;--dy:3">Compromised subdomain</span>    </div>
+    <div class="rm-cell" style="grid-row:1;grid-column:2">
+<span class="rm-tag s-critical" data-fid="N-15" style="--dx:-1;--dy:4">Insolvency of the predecessor company</span>    </div>
+    <div class="rm-cell" style="grid-row:1;grid-column:3">
+    </div>
+    <div class="rm-cell" style="grid-row:2;grid-column:1">
+<span class="rm-tag s-latent" data-fid="N-11" style="--dx:-1;--dy:4">DMARC protection missing</span><span class="rm-tag s-latent" data-fid="N-13" style="--dx:3;--dy:3">Exposed key to the SMS gateway</span><span class="rm-tag s-latent" data-fid="N-16" style="--dx:-4;--dy:2">Shareholder with an untraceable owner</span>    </div>
+    <div class="rm-cell" style="grid-row:2;grid-column:2">
+<span class="rm-tag s-latent" data-fid="N-01" style="--dx:-1;--dy:4">Missing 2023 and 2024 accounts</span><span class="rm-tag s-latent" data-fid="N-02" style="--dx:3;--dy:3">Split contract for Dolní Lhota</span><span class="rm-tag s-latent" data-fid="N-12" style="--dx:-4;--dy:2">Internal price list with margins in Google&#39;s index</span><span class="rm-tag s-latent" data-fid="N-14" style="--dx:0;--dy:1">Expired ISO 9001 certificate</span><span class="rm-tag s-latent" data-fid="N-18" style="--dx:4;--dy:0">Donation to the mayor&#39;s party and a municipal contract</span><span class="rm-tag s-latent" data-fid="N-20" style="--dx:-3;--dy:-1">Proxy holder as a subcontractor&#39;s shareholder</span><span class="rm-tag s-latent" data-fid="N-22" style="--dx:1;--dy:-2">A customer&#39;s contract on Instagram</span>    </div>
+    <div class="rm-cell" style="grid-row:2;grid-column:3">
+<span class="rm-tag s-latent" data-fid="N-07" style="--dx:-1;--dy:4">Wave of one-star reviews</span><span class="rm-tag s-latent" data-fid="N-08" style="--dx:3;--dy:3">Autocomplete suggests “fraud”</span>    </div>
+    <div class="rm-cell" style="grid-row:3;grid-column:1">
+<span class="rm-tag s-noise" data-fid="N-06" style="--dx:-1;--dy:4">Old dispute page in archive</span><span class="rm-tag s-noise" data-fid="N-17" style="--dx:3;--dy:3">Related-company loans</span>    </div>
+    <div class="rm-cell" style="grid-row:3;grid-column:2">
+<span class="rm-tag s-noise" data-fid="N-03" style="--dx:-1;--dy:4">Returned subsidy part</span><span class="rm-tag s-noise" data-fid="N-19" style="--dx:3;--dy:3">Director&#39;s other companies</span><span class="rm-tag s-noise" data-fid="N-21" style="--dx:-4;--dy:2">Reviews: late pay</span>    </div>
+    <div class="rm-cell" style="grid-row:3;grid-column:3">
+<span class="rm-tag s-noise" data-fid="N-05" style="--dx:-1;--dy:4">2019 noise article</span><span class="rm-tag s-noise" data-fid="N-09" style="--dx:3;--dy:3">ChatGPT mix-up</span>    </div>
+  </div>
+  <div class="rm-cols">
+<div class="rm-collab">A specialist in a day</div>
+<div class="rm-collab">A curious person in an hour</div>
+<div class="rm-collab">Anyone in a minute</div>
+  </div>
+  <div class="rm-x">How easily someone finds it</div>
+</div>  </div>
+</section>
+
+<section class="paper sec-panels">
+  <div class="sec-in panels">
+    <div class="panel">
+      <h2 class="h-m">What is in order</h2>
+      <p class="lead-s">We looked here and found nothing harmful.</p>
+      <dl class="ok-list">
+<div><dt><span class="tnum">1</span> Registers and authorities</dt><dd><ul><li>The company itself is not in the Insolvency Register.</li><li>It is not listed as an unreliable VAT payer.</li><li>It is not on the sanctions lists of the EU, the UN, the United Kingdom or the USA.</li><li>We did not find the company in the decisions of authorities (consumer protection, competition, personal data protection).</li></ul></dd></div>
+<div><dt><span class="tnum">2</span> Courts</dt><dd><ul><li>Apart from the dispute in finding N-04, no other public court decisions, not even for the connected companies from layer 8.</li></ul></dd></div>
+<div><dt><span class="tnum">3</span> Media</dt><dd><ul><li>Six articles in the last three years, all neutral or positive.</li><li>The archive of old website versions contains nothing beyond findings N-06 and N-15.</li></ul></dd></div>
+<div><dt><span class="tnum">4</span> Reviews and discussions</dt><dd><ul><li>An average of 4.6 from 212 Google reviews. Without the wave in finding N-07 it would be 4.8.</li><li>Firmy.cz: 4.7 from 58 ratings. No record on Trustpilot.</li></ul></dd></div>
+<div><dt><span class="tnum">5</span> Search and AI</dt><dd><ul><li>Gemini and Perplexity describe the company correctly.</li><li>Seven of the first ten Google results for the company name are its own or positive.</li></ul></dd></div>
+<div><dt><span class="tnum">6</span> Technical footprint and security</dt><dd><ul><li>The main website has a valid HTTPS certificate and an up-to-date content management system.</li><li>The SPF and DKIM records are set up correctly.</li><li>We found no look-alike domains or fake profiles posing as the company.</li></ul></dd></div>
+<div><dt><span class="tnum">7</span> Words versus deeds</dt><dd><ul><li>The number of completed projects on the website matches the references.</li><li>The references given can be traced and the customers exist.</li></ul></dd></div>
+<div><dt><span class="tnum">8</span> Connections</dt><dd><ul><li>None of the connected companies is in insolvency or on sanctions lists as of the audit date; the predecessor from finding N-15 has been struck off since 2019.</li><li>Apart from finding N-18, we found no other tie to a political party, movement or authority.</li></ul></dd></div>
+<div><dt><span class="tnum">9</span> People and processes</dt><dd><ul><li>Job ads from the last two years do not reveal internal systems or the way payments are approved.</li><li>The website shows only general contact addresses, no named addresses from which an address pattern could be derived.</li></ul></dd></div>
+      </dl>
+    </div>
+    <div class="panel panel-2">
+      <h2 class="h-m">What we did not do</h2>
+      <ul class="not-list"><li>We did not use leaked databases, the dark web or purchased data.</li><li>We did not search for people by photo and did not use facial recognition.</li><li>We did not log in to other people&#39;s accounts, create fake profiles or pretend to be anyone.</li><li>We did not actively test your systems. The technical part is passive: only public records of the domain and website. We did not try the exposed key and did not record its value anywhere.</li><li>We processed people only in their public roles from the registers (managing director, proxy holder, shareholder) and through their other companies, without their private lives and without any criminal matters.</li><li>We did not check employees or anyone who did not give written consent.</li></ul>
+      <p class="limits">The report shows what was publicly available on the date of the audit and how it can be connected. We searched in rounds until a further round brought nothing new; what we did not find may still exist. Connections between companies, roles and money are signals with evidence, not accusations. The internet and the registers change, so we recommend repeating the check before meeting the investor.</p>
+      <a class="btn btn-dark" href="../files/MUCSIA_report_sample_EN.pdf" download>Download the sample report (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<div hidden data-details>
+  <template data-detail="N-01">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Dirt on the company</span>
+        <span class="sev s-latent"><i></i><i></i><i></i>Latent</span>
+        <span class="fc-find f-hour"><i></i><i></i><i></i>A curious person in an hour</span>
+        <span class="det-id tnum">N-01</span>
+      </header>
+      <h3>Financial statements for 2023 and 2024 are missing from the Collection of Deeds</h3>
+      <dl class="det-grid">
+        <div><dt>What we found</dt><dd>The last published financial statements are for 2022. The law requires publication within 12 months after the end of the accounting period, so two are missing. An investor opens the Collection of Deeds among the first things and, in connection with findings N-16 and N-17, will want to know why the numbers are hidden for exactly the years when a new shareholder came in and the loans arrived.</dd></div>
+        <div><dt>Attack line</dt><dd class="attack">The company has not published its numbers for two years, right since outside money came in. What is it hiding?</dd></div>
+<div><dt>Recommendation</dt><dd>File both statements in the Collection of Deeds and put them first in the investor&#39;s documentation, together with an overview of the contributions and loans from findings N-16 and N-17. <span class="dl dl-month"><i></i>This month</span></dd></div>        <div><dt>Certainty</dt><dd><span class="cert c-verified"></span>Verified</dd></div>
+        <div><dt>Layer</dt><dd><span class="tnum">1</span> Registers and authorities</dd></div>
+        <div class="wide"><dt>Evidence</dt><dd><ul class="ev-list"><li><span class="tnum">D-01</span> List of deeds: the latest statements are for 2022<br><span class="ev-src">Commercial Register, Collection of Deeds, or.justice.cz/ias/ui/vypis-sl-firma?subjektId=000000, captured 15 Sep 2026 10:12</span></li></ul></dd></div>
+<div class="wide resp"><dt>Prepared response</dt><dd><p class="resp-q">When they ask: Why are two years of your financial statements missing from the Collection of Deeds?</p><p class="resp-a">It was an administrative error when we changed accounting firms in 2023. Both statements were properly prepared and we filed them on [filing date]. We are happy to present them with a commentary.</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-02">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Political exposure</span>
+        <span class="sev s-latent"><i></i><i></i><i></i>Latent</span>
+        <span class="fc-find f-hour"><i></i><i></i><i></i>A curious person in an hour</span>
+        <span class="det-id tnum">N-02</span>
+      </header>
+      <h3>A contract for the Dolní Lhota Municipal Office split into two orders just below the tender threshold</h3>
+      <dl class="det-grid">
+        <div><dt>What we found</dt><dd>The Contract Register holds two 2024 orders from the Dolní Lhota Municipal Office for repairing the town hall roof: EUR 19,500 and EUR 19,000, signed three weeks apart, with the same subject. The town&#39;s internal directive, which is also public, requires inviting several bidders from EUR 20,000. Splitting is not illegal in itself, but it looks like getting around the rules, and together with finding N-18 it takes on a different dimension.</dd></div>
+        <div><dt>Attack line</dt><dd class="attack">They got the town&#39;s contract without a tender; all it took was cutting it into two orders.</dd></div>
+<div><dt>Recommendation</dt><dd>Prepare a documented explanation of why the repair was split (stages, emergency condition, change of scope) and have it ready for the investor too. In future, insist on one contract and a tender with public clients, even when the client does not require it. <span class="dl dl-month"><i></i>This month</span></dd></div>        <div><dt>Certainty</dt><dd><span class="cert c-verified"></span>Verified</dd></div>
+        <div><dt>Layer</dt><dd><span class="tnum">1</span> Registers and authorities</dd></div>
+        <div class="wide"><dt>Evidence</dt><dd><ul class="ev-list"><li><span class="tnum">D-02</span> Two municipal orders for the town hall roof repair (EUR 19,500 and 19,000)<br><span class="ev-src">Contract Register, smlouvy.gov.cz/smlouva/000000, captured 15 Sep 2026 11:05</span></li><li><span class="tnum">D-03</span> The town&#39;s directive on small-scale contracts, EUR 20,000 threshold<br><span class="ev-src">Website of the town of Dolní Lhota, dolni-lhota.example/urad/smernice, captured 15 Sep 2026 11:20</span></li></ul></dd></div>
+<div class="wide resp"><dt>Prepared response</dt><dd><p class="resp-q">When they ask: The town of Dolní Lhota gave you the town hall repair without a tender, as two orders below the limit. Did you arrange it?</p><p class="resp-a">The town set the scope: the first order covered the emergency part of the roof, the second the rest after the covering was removed [fill in according to the facts]. Both prices match the [itemised budget], which we are happy to present. The client decides how it awards work; we submitted a bid at its invitation.</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-03">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Political exposure</span>
+        <span class="sev s-noise"><i></i><i></i><i></i>Noise</span>
+        <span class="fc-find f-hour"><i></i><i></i><i></i>A curious person in an hour</span>
+        <span class="det-id tnum">N-03</span>
+      </header>
+      <h3>Employee training subsidy: EUR 5,000 returned for an unmet indicator</h3>
+      <dl class="det-grid">
+        <div><dt>What we found</dt><dd>The public subsidy register lists an employee training project from 2022 to 2023 worth EUR 44,000 with a record of EUR 5,000 returned because the company did not reach the number of trained persons. It is a routine correction, not a penalty for fraud, but without an explanation it looks like a problem with subsidies.</dd></div>
+        <div><dt>Attack line</dt><dd class="attack">They had to return a subsidy. Look at everything they take public money for.</dd></div>
+<div><dt>Recommendation</dt><dd>Keep a one-sentence explanation ready (two employees left during the project) and the proof of repayment. Do nothing else. <span class="dl dl-quarter"><i></i>This quarter</span></dd></div>        <div><dt>Certainty</dt><dd><span class="cert c-verified"></span>Verified</dd></div>
+        <div><dt>Layer</dt><dd><span class="tnum">1</span> Registers and authorities</dd></div>
+        <div class="wide"><dt>Evidence</dt><dd><ul class="ev-list"><li><span class="tnum">D-04</span> Record of the project and of the EUR 5,000 repayment<br><span class="ev-src">Public subsidy register (CEDR), cedr.mfcr.cz, captured 15 Sep 2026 12:02</span></li></ul></dd></div>
+      </dl>
+    </article>
+  </template>
+  <template data-detail="N-04">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Findable scandal</span>
+        <span class="sev s-critical"><i></i><i></i><i></i>Critical</span>
+        <span class="fc-find f-day"><i></i><i></i><i></i>A specialist in a day</span>
+        <span class="det-id tnum">N-04</span>
+      </header>
+      <h3>Final judgment: a lost EUR 48,000 dispute with a subcontractor</h3>
+      <dl class="det-grid">
+        <div><dt>What we found</dt><dd>In 2023 the regional court ruled with final effect that the company must pay Gama Roofing Supplies s.r.o. EUR 48,000 for completed work, plus interest. The judgment can be found publicly in the database of court decisions, and the web archive still holds your earlier public statement about it (finding N-06).</dd></div>
+        <div><dt>Attack line</dt><dd class="attack">They do not pay their subcontractors. It took a court to make them.</dd></div>
+<div><dt>Recommendation</dt><dd>Prepare a short, truthful explanation and proof of payment. For the investor, keep an overview of all disputes from the last five years with their outcome, including disputes of the connected companies from layer 8. <span class="dl dl-week"><i></i>This week</span></dd></div>        <div><dt>Certainty</dt><dd><span class="cert c-verified"></span>Verified</dd></div>
+        <div><dt>Layer</dt><dd><span class="tnum">2</span> Courts</dd></div>
+        <div class="wide"><dt>Evidence</dt><dd><ul class="ev-list"><li><span class="tnum">D-05</span> Judgment of the regional court, 2023<br><span class="ev-src">Database of court decisions, rozhodnuti.justice.cz/rozhodnuti/000000, captured 16 Sep 2026 09:05</span></li><li><span class="tnum">D-06</span> Status of proceedings and finality<br><span class="ev-src">InfoSoud, infosoud.justice.cz, captured 16 Sep 2026 09:22</span></li></ul></dd></div>
+<div class="wide resp"><dt>Prepared response</dt><dd><p class="resp-q">When they ask: A court ordered you to pay a subcontractor 1.2 million. Do you not pay your partners?</p><p class="resp-a">It was a dispute over the quality of work on one project from 2021. The court decided differently than we expected. We respected the judgment and paid the full amount on [payment date]. We work with our other subcontractors long term and without disputes, and we are happy to provide references.</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-05">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Media risk</span>
+        <span class="sev s-noise"><i></i><i></i><i></i>Noise</span>
+        <span class="fc-find f-minute"><i></i><i></i><i></i>Anyone in a minute</span>
+        <span class="det-id tnum">N-05</span>
+      </header>
+      <h3>A 2019 article on a regional news site about neighbours complaining of noise</h3>
+      <dl class="det-grid">
+        <div><dt>What we found</dt><dd>A short article about night work on a construction site in Horní Lhota. It is on the first page of Google for the company name, but it is old and the company was given space to respond.</dd></div>
+        <div><dt>Attack line</dt><dd class="attack">They build at night and do not care about the neighbours.</dd></div>
+<div><dt>Recommendation</dt><dd>New articles and references will push it down over time. Do nothing else. <span class="dl dl-quarter"><i></i>This quarter</span></dd></div>        <div><dt>Certainty</dt><dd><span class="cert c-verified"></span>Verified</dd></div>
+        <div><dt>Layer</dt><dd><span class="tnum">3</span> Media</dd></div>
+        <div class="wide"><dt>Evidence</dt><dd><ul class="ev-list"><li><span class="tnum">D-07</span> Article of 12 June 2019 about night work<br><span class="ev-src">Regional news website, zpravy-region.example/2019/06/hluk-na-stavbe, captured 16 Sep 2026 11:40</span></li></ul></dd></div>
+      </dl>
+    </article>
+  </template>
+  <template data-detail="N-06">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Findable scandal</span>
+        <span class="sev s-noise"><i></i><i></i><i></i>Noise</span>
+        <span class="fc-find f-day"><i></i><i></i><i></i>A specialist in a day</span>
+        <span class="det-id tnum">N-06</span>
+      </header>
+      <h3>The web archive keeps your 2021 page calling the subcontractor an “unreliable partner”</h3>
+      <dl class="det-grid">
+        <div><dt>What we found</dt><dd>The Wayback Machine holds a November 2021 version of your website with a News section in which the company describes the dispute with Gama Roofing Supplies s.r.o., calls it an “unreliable partner” and writes that “we will prevail in court”. You deleted the page in 2023 and lost the case (finding N-04). The archive keeps the text, and anyone can put it next to the judgment.</dd></div>
+        <div><dt>Attack line</dt><dd class="attack">First they smeared a partner in public, then lost to them in court. They deleted the page; the archive did not.</dd></div>
+<div><dt>Recommendation</dt><dd>Do not try to have the archive deleted; it responds slowly to removal requests and flags them. Keep the explanation ready together with the response to finding N-04 and do not write publicly about disputes in future. <span class="dl dl-quarter"><i></i>This quarter</span></dd></div>        <div><dt>Certainty</dt><dd><span class="cert c-verified"></span>Verified</dd></div>
+        <div><dt>Layer</dt><dd><span class="tnum">3</span> Media</dd></div>
+        <div class="wide"><dt>Evidence</dt><dd><ul class="ev-list"><li><span class="tnum">D-08</span> News page from November 2021 with the text about the dispute<br><span class="ev-src">Wayback Machine, web.archive.org/web/2021*/samplecompany.example/news, captured 16 Sep 2026 12:15</span></li></ul></dd></div>
+      </dl>
+    </article>
+  </template>
+  <template data-detail="N-07">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Dirt on the company</span>
+        <span class="sev s-latent"><i></i><i></i><i></i>Latent</span>
+        <span class="fc-find f-minute"><i></i><i></i><i></i>Anyone in a minute</span>
+        <span class="det-id tnum">N-07</span>
+      </header>
+      <h3>A wave of nine one-star Google reviews within three weeks</h3>
+      <dl class="det-grid">
+        <div><dt>What we found</dt><dd>In March 2025, nine one-star reviews appeared, six of them from accounts with no other activity and no text. The average dropped from 4.8 to 4.6. The pattern matches a targeted attack, but it cannot be proven.</dd></div>
+        <div><dt>Attack line</dt><dd class="attack">Look at their reviews. People rate them worse and worse.</dd></div>
+<div><dt>Recommendation</dt><dd>Report the suspicious reviews to Google as policy violations and reply to the genuine ones. Ask satisfied customers from the last year for a rating. <span class="dl dl-month"><i></i>This month</span></dd></div>        <div><dt>Certainty</dt><dd><span class="cert c-probable"></span>Probable</dd></div>
+        <div><dt>Layer</dt><dd><span class="tnum">4</span> Reviews and discussions</dd></div>
+        <div class="wide"><dt>Evidence</dt><dd><ul class="ev-list"><li><span class="tnum">D-09</span> Overview of reviews with dates<br><span class="ev-src">Google Maps, company profile, maps.google.com/?cid=000000, captured 17 Sep 2026 08:47</span></li><li><span class="tnum">D-10</span> Six reviewer profiles with no other activity<br><span class="ev-src">Google Maps, reviewer profiles, maps.google.com/contrib/000000, captured 17 Sep 2026 09:10</span></li></ul></dd></div>
+<div class="wide resp"><dt>Prepared response</dt><dd><p class="resp-q">When they ask: Why have you had so many bad reviews recently?</p><p class="resp-a">Most of those ratings came within three weeks from accounts with no other activity, so we reported them to Google. We reply to every genuine experience by name. In the last year we completed [number] projects and verified customers rate us [rating] on average.</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-08">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Media risk</span>
+        <span class="sev s-latent"><i></i><i></i><i></i>Latent</span>
+        <span class="fc-find f-minute"><i></i><i></i><i></i>Anyone in a minute</span>
+        <span class="det-id tnum">N-08</span>
+      </header>
+      <h3>Google autocomplete suggests the word “fraud” with the company name</h3>
+      <dl class="det-grid">
+        <div><dt>What we found</dt><dd>When typing the company name, Google offers “sample company fraud” and “sample company insolvency” among the first five suggestions. The suggestions most likely come from searches after the review wave (finding N-07) and from queries about the insolvency of the predecessor company (finding N-15).</dd></div>
+        <div><dt>Attack line</dt><dd class="attack">Just start typing their name and Google itself suggests the word fraud.</dd></div>
+<div><dt>Recommendation</dt><dd>Address the causes (N-07, N-15) and strengthen the content people look for: references, case studies, reviews. The suggestion can be reported to Google, but it returns unless the causes change. <span class="dl dl-month"><i></i>This month</span></dd></div>        <div><dt>Certainty</dt><dd><span class="cert c-verified"></span>Verified</dd></div>
+        <div><dt>Layer</dt><dd><span class="tnum">5</span> Search and AI</dd></div>
+        <div class="wide"><dt>Evidence</dt><dd><ul class="ev-list"><li><span class="tnum">D-11</span> Autocomplete suggestions when typing the company name<br><span class="ev-src">Google, private window, google.cz, captured 17 Sep 2026 14:25</span></li></ul></dd></div>
+<div class="wide resp"><dt>Prepared response</dt><dd><p class="resp-q">When they ask: When someone types your name, Google suggests the word fraud. Why?</p><p class="resp-a">Autocomplete shows what people search for, not what is true. It relates to a wave of anonymous ratings that we reported, and to the 2017 insolvency of a different company, which we explain openly. We are happy to give you contacts of customers from recent years.</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-09">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Media risk</span>
+        <span class="sev s-noise"><i></i><i></i><i></i>Noise</span>
+        <span class="fc-find f-minute"><i></i><i></i><i></i>Anyone in a minute</span>
+        <span class="det-id tnum">N-09</span>
+      </header>
+      <h3>ChatGPT claims the company went through insolvency in 2017. It merges it with the predecessor company</h3>
+      <dl class="det-grid">
+        <div><dt>What we found</dt><dd>Asked “What do you know about Sample Company s.r.o.?”, ChatGPT answered that the company “went through insolvency in 2017”. It was the dissolved Sample Roofing s.r.o., with the same managing director and address (finding N-15), that went through insolvency, not your company. The answer is factually wrong but has a real basis, which makes it harder to refute. Gemini and Perplexity answer correctly.</dd></div>
+        <div><dt>Attack line</dt><dd class="attack">Even artificial intelligence knows they went bust once.</dd></div>
+<div><dt>Recommendation</dt><dd>Publish accurate company details (company ID, year of formation, management) on the website in a structured form and report the error through feedback in ChatGPT. Check again in a month. Without the explanation for finding N-15 the answer will keep coming back. <span class="dl dl-quarter"><i></i>This quarter</span></dd></div>        <div><dt>Certainty</dt><dd><span class="cert c-verified"></span>Verified</dd></div>
+        <div><dt>Layer</dt><dd><span class="tnum">5</span> Search and AI</dd></div>
+        <div class="wide"><dt>Evidence</dt><dd><ul class="ev-list"><li><span class="tnum">D-12</span> ChatGPT&#39;s answer to a question about the company<br><span class="ev-src">ChatGPT, default model on the capture date, chatgpt.com, captured 17 Sep 2026 15:03</span></li></ul></dd></div>
+      </dl>
+    </article>
+  </template>
+  <template data-detail="N-10">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Dirt on the company</span>
+        <span class="sev s-critical"><i></i><i></i><i></i>Critical</span>
+        <span class="fc-find f-day"><i></i><i></i><i></i>A specialist in a day</span>
+        <span class="det-id tnum">N-10</span>
+      </header>
+      <h3>A forgotten subdomain redirects to a fraudulent website</h3>
+      <dl class="det-grid">
+        <div><dt>What we found</dt><dd>The address test.samplecompany.example runs on an old WordPress installation from 2019 and some of its links lead to a fake prize page. That is a sign of a compromise. Anyone who comes across the link sees the company name next to a scam.</dd></div>
+        <div><dt>Attack line</dt><dd class="attack">Their website spreads scams. How can they protect customer data when they cannot even look after their own website?</dd></div>
+<div><dt>Recommendation</dt><dd>Shut the subdomain down immediately, find out how the compromise happened and check the other subdomains. Then ask Google to review the address again. <span class="dl dl-week"><i></i>This week</span></dd></div>        <div><dt>Certainty</dt><dd><span class="cert c-verified"></span>Verified</dd></div>
+        <div><dt>Layer</dt><dd><span class="tnum">6</span> Technical footprint and security</dd></div>
+        <div class="wide"><dt>Evidence</dt><dd><ul class="ev-list"><li><span class="tnum">D-13</span> Redirect from the subdomain to a fraudulent page<br><span class="ev-src">Passive website check, test.samplecompany.example, captured 18 Sep 2026 09:44</span></li><li><span class="tnum">D-14</span> Warning about harmful content at the address<br><span class="ev-src">Google Safe Browsing, transparency report, transparencyreport.google.com/safe-browsing/search, captured 18 Sep 2026 09:51</span></li></ul></dd></div>
+<div class="wide resp"><dt>Prepared response</dt><dd><p class="resp-q">When they ask: Links from your domain lead to fraudulent pages. How is that possible?</p><p class="resp-a">It was an old test address that we stopped using in 2019 and forgot to shut down. An attacker misused it. After finding out, we shut it down on [date] and checked our other systems. [Fill in after checking with the web administrator: whether customer data was stored there.]</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-11">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Leverage</span>
+        <span class="sev s-latent"><i></i><i></i><i></i>Latent</span>
+        <span class="fc-find f-day"><i></i><i></i><i></i>A specialist in a day</span>
+        <span class="det-id tnum">N-11</span>
+      </header>
+      <h3>The domain has no protection against spoofed e-mails (DMARC)</h3>
+      <dl class="det-grid">
+        <div><dt>What we found</dt><dd>Anyone can send an e-mail that looks as if it came from an @samplecompany.example address, for example a fake invoice with a different account number. SPF is set up, DMARC is missing. Your identity can be used against your customers and against you.</dd></div>
+        <div><dt>Attack line</dt><dd class="attack">“Hello, please find our invoice attached. From this month on, please pay to our new account.”</dd></div>
+<div><dt>Recommendation</dt><dd>Set up DMARC in monitoring mode first and tighten it after two weeks. Tell the accountant and key customers that you always confirm a change of account by phone. <span class="dl dl-month"><i></i>This month</span></dd></div>        <div><dt>Certainty</dt><dd><span class="cert c-verified"></span>Verified</dd></div>
+        <div><dt>Layer</dt><dd><span class="tnum">6</span> Technical footprint and security</dd></div>
+        <div class="wide"><dt>Evidence</dt><dd><ul class="ev-list"><li><span class="tnum">D-15</span> Missing DMARC record, SPF set up<br><span class="ev-src">Public DNS records of the domain, _dmarc.samplecompany.example, captured 18 Sep 2026 10:20</span></li></ul></dd></div>
+<div class="wide resp"><dt>Prepared response</dt><dd><p class="resp-q">When they ask: We received an invoice from your address with a different account number. Did you send it?</p><p class="resp-a">We did not. We never change account numbers by e-mail, and every change is confirmed by phone. We secured the domain against spoofed messages on [date]. If you receive a similar message, please call [phone].</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-12">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Leverage</span>
+        <span class="sev s-latent"><i></i><i></i><i></i>Latent</span>
+        <span class="fc-find f-hour"><i></i><i></i><i></i>A curious person in an hour</span>
+        <span class="det-id tnum">N-12</span>
+      </header>
+      <h3>An internal 2025 price list with margins sits in an open folder on the website and Google has it indexed</h3>
+      <dl class="det-grid">
+        <div><dt>What we found</dt><dd>The folder samplecompany.example/documents/ contains the file “Pricelist-internal-margins-2025.pdf” with purchase prices, margins by type of project and discounts for the three largest customers. Directory listing is on, and Google offers the file for a query with the company name and the word “price list”. Whoever has it can push on price, approach your customers with a better offer, or threaten you with it.</dd></div>
+        <div><dt>Attack line</dt><dd class="attack">We know your margins and the discounts for your biggest customers. Do we come to terms, or do they get it?</dd></div>
+<div><dt>Recommendation</dt><dd>Remove the file immediately, turn off directory listing and ask Google to remove it from the index. Find out who had access to the folder and whether other files are there. Consider informing the customers before they hear it from elsewhere. <span class="dl dl-week"><i></i>This week</span></dd></div>        <div><dt>Certainty</dt><dd><span class="cert c-verified"></span>Verified</dd></div>
+        <div><dt>Layer</dt><dd><span class="tnum">6</span> Technical footprint and security</dd></div>
+        <div class="wide"><dt>Evidence</dt><dd><ul class="ev-list"><li><span class="tnum">D-16</span> Listing of the documents/ folder with the price list file<br><span class="ev-src">Company website, samplecompany.example/documents/, captured 18 Sep 2026 10:48</span></li><li><span class="tnum">D-17</span> The file in Google results for the query “sample company price list”<br><span class="ev-src">Google, private window, google.cz, captured 18 Sep 2026 10:55</span></li></ul></dd></div>
+<div class="wide resp"><dt>Prepared response</dt><dd><p class="resp-q">When they ask: Your internal price list with margins was publicly accessible. How?</p><p class="resp-a">The file got into a public folder of the website by mistake during [circumstance] and stayed there for [period]. After finding out, we removed it on [date], including from search engines. The terms with our customers do not change, and we explained the situation to each of them personally.</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-13">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Leverage</span>
+        <span class="sev s-latent"><i></i><i></i><i></i>Latent</span>
+        <span class="fc-find f-day"><i></i><i></i><i></i>A specialist in a day</span>
+        <span class="det-id tnum">N-13</span>
+      </header>
+      <h3>A public repository of your former web supplier contains an access key to your SMS gateway</h3>
+      <dl class="det-grid">
+        <div><dt>What we found</dt><dd>A public GitHub repository belonging to your former web supplier contains a configuration file with a key to an SMS gateway account held in the company&#39;s name. The file has been in the repository history since 2022. We only established the state of exposure: we did not try the key and we do not record its value anywhere. We do not know whether it is still valid; if it is, anyone can send text messages in your name and at your expense.</dd></div>
+        <div><dt>Attack line</dt><dd class="attack">Your customers get a text message from your number with a link to a fake payment. And you pay for it.</dd></div>
+<div><dt>Recommendation</dt><dd>Revoke the key with the SMS gateway provider immediately and issue a new one, check the history of sent messages and the billing for the last year. Ask the supplier to remove the file from the repository history and review what other access the supplier had. <span class="dl dl-week"><i></i>This week</span></dd></div>        <div><dt>Certainty</dt><dd><span class="cert c-verified"></span>Verified</dd></div>
+        <div><dt>Layer</dt><dd><span class="tnum">6</span> Technical footprint and security</dd></div>
+        <div class="wide"><dt>Evidence</dt><dd><ul class="ev-list"><li><span class="tnum">D-18</span> Configuration file with the key in the repository history (state of exposure only, no value)<br><span class="ev-src">GitHub, public repository of the former supplier, github.com/000000/000000/commit/000000, captured 18 Sep 2026 11:30</span></li></ul></dd></div>
+<div class="wide resp"><dt>Prepared response</dt><dd><p class="resp-q">When they ask: Customers are receiving text messages in your name with a payment link. Did you send them?</p><p class="resp-a">We did not. We found that the access key to our SMS gateway had remained in a file of a former supplier, and we revoked it on [date]. We never request payments by text message. If you received such a message, do not pay anything and call us on [phone].</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-14">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Findable scandal</span>
+        <span class="sev s-latent"><i></i><i></i><i></i>Latent</span>
+        <span class="fc-find f-hour"><i></i><i></i><i></i>A curious person in an hour</span>
+        <span class="det-id tnum">N-14</span>
+      </header>
+      <h3>The website shows ISO 9001 certification, the certificate expired in March 2024</h3>
+      <dl class="det-grid">
+        <div><dt>What we found</dt><dd>The ISO 9001 logo is on the home page and in offers. According to the certification body&#39;s public register, validity ended on 14 March 2024 and was not renewed. In a tender this can be challenged in one sentence.</dd></div>
+        <div><dt>Attack line</dt><dd class="attack">They boast about a certificate they have not had for two years. What else are they embellishing?</dd></div>
+<div><dt>Recommendation</dt><dd>Remove the logo from the website and offers now, or renew the certification. Also review the other claims on the website, such as awards, project counts and the year of formation (finding N-15). <span class="dl dl-month"><i></i>This month</span></dd></div>        <div><dt>Certainty</dt><dd><span class="cert c-verified"></span>Verified</dd></div>
+        <div><dt>Layer</dt><dd><span class="tnum">7</span> Words versus deeds</dd></div>
+        <div class="wide"><dt>Evidence</dt><dd><ul class="ev-list"><li><span class="tnum">D-19</span> ISO 9001 certificate status: expired<br><span class="ev-src">Public register of the certification body, certifikacni-organ.example/registr/000000, captured 19 Sep 2026 08:58</span></li></ul></dd></div>
+<div class="wide resp"><dt>Prepared response</dt><dd><p class="resp-q">When they ask: You show ISO 9001, but your certificate has expired. Why?</p><p class="resp-a">You are right. We did not renew the certificate in time after changing certification bodies, and the logo stayed on the website by mistake. We corrected it on [date]. We continue to use our quality management procedures and recertification is scheduled for [date].</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-15">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Connected dots</span>
+        <span class="sev s-critical"><i></i><i></i><i></i>Critical</span>
+        <span class="fc-find f-hour"><i></i><i></i><i></i>A curious person in an hour</span>
+        <span class="det-id tnum">N-15</span>
+      </header>
+      <h3>Predecessor company of the same director: bankrupt in 2017</h3>
+      <dl class="det-grid">
+        <div><dt>What we found</dt><dd>Sample Roofing s.r.o. (struck off in 2019) had the same managing director and the same premises address as your company. Bankruptcy was declared in 2017, creditors filed claims of EUR 170,000 and received 11 percent. The domain samplecompany.example was created in 2016, the web archive from that year shows the logo “Sample Roofing, now Sample Company s.r.o.”, and today&#39;s website says “on the market since 2006”, the year the dissolved company was formed. Anyone who enters the managing director&#39;s name in the Insolvency Register finds the connection. The pattern “the business goes on, the debts stay behind” is exactly what an investor and creditors look for.</dd></div>
+        <div><dt>Attack line</dt><dd class="attack">They already left creditors with four million in debts once and carried on the next day under a new name. Why would they not do it again?</dd></div>
+<div><dt>Recommendation</dt><dd>Prepare a complete and truthful account for the investor: what happened in 2017, what passed from the predecessor (people, customers, brand), what did not (debts, liabilities), and whether the transfer was challenged in the insolvency proceedings. Change “on the market since 2006” to “building on experience since 2006, a limited company since 2011”. Hide nothing; the connection can be found in an hour. <span class="dl dl-week"><i></i>This week</span></dd></div>        <div><dt>Certainty</dt><dd><span class="cert c-verified"></span>Verified</dd></div>
+        <div><dt>Layer</dt><dd><span class="tnum">8</span> Connections</dd></div>
+        <div class="wide"><dt>Evidence</dt><dd><ul class="ev-list"><li><span class="tnum">D-20</span> Bankruptcy of Sample Roofing s.r.o. (2017), claims filed EUR 170,000<br><span class="ev-src">Insolvency Register (ISIR), isir.justice.cz/isir/ueu/evidence_upadcu_detail.do?id=000000, captured 16 Sep 2026 15:10</span></li><li><span class="tnum">D-21</span> Extract of the dissolved company: same managing director and premises address<br><span class="ev-src">Commercial Register, full extract, or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=000001, captured 16 Sep 2026 15:25</span></li><li><span class="tnum">D-22</span> 2016 website with the logo “Sample Roofing, now Sample Company s.r.o.” and today&#39;s text “on the market since 2006”<br><span class="ev-src">Wayback Machine and company website, web.archive.org/web/2016*/samplecompany.example, captured 16 Sep 2026 15:40</span></li></ul></dd></div>
+<div class="wide resp"><dt>Prepared response</dt><dd><p class="resp-q">When they ask: Your previous company went bankrupt and creditors got eleven percent. Now you trade under a new name. Why should we trust you?</p><p class="resp-a">Sample Roofing s.r.o. ended in 2017 after [reason, fill in according to the facts]. Sample Company s.r.o. was formed back in 2011 as a separate company and took over the brand, the people and the customers, not the liabilities; the insolvency trustee did not challenge the transfer [fill in according to the file]. Since then the company has paid on time, which we can document with financial statements and subcontractor references.</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-16">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Follow the money</span>
+        <span class="sev s-latent"><i></i><i></i><i></i>Latent</span>
+        <span class="fc-find f-day"><i></i><i></i><i></i>A specialist in a day</span>
+        <span class="det-id tnum">N-16</span>
+      </header>
+      <h3>The new shareholder from 2024 has an untraceable owner</h3>
+      <dl class="det-grid">
+        <div><dt>What we found</dt><dd>In March 2024, Alfa Invest Holding s.r.o. joined the company with a contribution of EUR 120,000 for a 25 percent share. According to the register it was formed in November 2023, has no employees or website, and its sole shareholder is a foreign company from a jurisdiction where owners are not publicly recorded. The register of beneficial owners lists only a substitute beneficial owner, that is the company&#39;s management, not the real owner. It is a signal, not an accusation; but a future investor and its bank will see it first when checking the origin of funds.</dd></div>
+        <div><dt>Attack line</dt><dd class="attack">Three million from a four-month-old shell whose owner nobody knows. Where does the money come from?</dd></div>
+<div><dt>Recommendation</dt><dd>Obtain from the shareholder documentation of the beneficial owner and the origin of the contribution (extract, declaration, agreement) before the investor or the bank asks. If the shareholder refuses to document it, expect it to stop the investor&#39;s entry. <span class="dl dl-month"><i></i>This month</span></dd></div>        <div><dt>Certainty</dt><dd><span class="cert c-verified"></span>Verified</dd></div>
+        <div><dt>Layer</dt><dd><span class="tnum">8</span> Connections</dd></div>
+        <div class="wide"><dt>Evidence</dt><dd><ul class="ev-list"><li><span class="tnum">D-23</span> Entry of the capital increase and the new shareholder (March 2024)<br><span class="ev-src">Commercial Register, full extract, or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=000000, captured 17 Sep 2026 16:05</span></li><li><span class="tnum">D-24</span> Substitute beneficial owner of Alfa Invest Holding s.r.o.<br><span class="ev-src">Register of beneficial owners, esm.justice.cz/ias/issm/rejstrik-osoba?subjektId=000002, captured 17 Sep 2026 16:30</span></li></ul></dd></div>
+<div class="wide resp"><dt>Prepared response</dt><dd><p class="resp-q">When they ask: Who is behind your shareholder Alfa Invest Holding and where did the three million come from?</p><p class="resp-a">The shareholder joined the company in 2024 on the basis of [circumstance]. Its beneficial owner is [role and document], and the contribution comes from [origin, documented]. We handed the documents to [whom] and they are available for a check of the origin of funds.</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-17">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Follow the money</span>
+        <span class="sev s-noise"><i></i><i></i><i></i>Noise</span>
+        <span class="fc-find f-day"><i></i><i></i><i></i>A specialist in a day</span>
+        <span class="det-id tnum">N-17</span>
+      </header>
+      <h3>Loans of EUR 85,000 from a related company with no stated interest or maturity</h3>
+      <dl class="det-grid">
+        <div><dt>What we found</dt><dd>The notes to the 2022 financial statements show liabilities of EUR 85,000 to Sample Property Management s.r.o., where the same managing director is the sole shareholder, with no information on interest or maturity. The report on related-party relations is missing from the Collection of Deeds. Between companies of the same people this is common, but without documentation it looks like money being shifted around.</dd></div>
+        <div><dt>Attack line</dt><dd class="attack">The company lives on loans from its own shell. What do the finances really look like?</dd></div>
+<div><dt>Recommendation</dt><dd>Add loan agreements with interest and maturity, prepare the report on related-party relations for the missing years and keep an overview of all transactions between the connected companies for the investor. <span class="dl dl-quarter"><i></i>This quarter</span></dd></div>        <div><dt>Certainty</dt><dd><span class="cert c-verified"></span>Verified</dd></div>
+        <div><dt>Layer</dt><dd><span class="tnum">8</span> Connections</dd></div>
+        <div class="wide"><dt>Evidence</dt><dd><ul class="ev-list"><li><span class="tnum">D-25</span> Notes to the 2022 statements: liabilities of EUR 85,000 to Sample Property Management s.r.o.<br><span class="ev-src">Commercial Register, Collection of Deeds, or.justice.cz/ias/ui/vypis-sl-detail?dokument=000000, captured 17 Sep 2026 17:02</span></li></ul></dd></div>
+      </dl>
+    </article>
+  </template>
+  <template data-detail="N-18">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Connected dots</span>
+        <span class="sev s-latent"><i></i><i></i><i></i>Latent</span>
+        <span class="fc-find f-hour"><i></i><i></i><i></i>A curious person in an hour</span>
+        <span class="det-id tnum">N-18</span>
+      </header>
+      <h3>A related company donated EUR 2,000 to the mayor&#39;s party in the year of the municipal contract</h3>
+      <dl class="det-grid">
+        <div><dt>What we found</dt><dd>The 2024 annual financial report of the Party for the Region lists a donation of EUR 2,000 from Sample Property Management s.r.o. (same managing director). The mayor of Dolní Lhota was elected for this party, and in the same year the town awarded your company the town hall roof repair as two orders without a tender (finding N-02). Each item on its own is legal and public. Together they form a “donation for a contract” story that can be written in an hour and takes years to refute.</dd></div>
+        <div><dt>Attack line</dt><dd class="attack">The company gives the party fifty thousand, the mayor from that party splits the contract below the limit. A coincidence?</dd></div>
+<div><dt>Recommendation</dt><dd>Build a timeline: when the donation was made, when the invitation went out, when the orders were signed, who decided on the award. If the donation preceded the contract, have the explanation ready now. In future, no donations to parties and movements from companies that bid for public contracts. <span class="dl dl-month"><i></i>This month</span></dd></div>        <div><dt>Certainty</dt><dd><span class="cert c-verified"></span>Verified</dd></div>
+        <div><dt>Layer</dt><dd><span class="tnum">8</span> Connections</dd></div>
+        <div class="wide"><dt>Evidence</dt><dd><ul class="ev-list"><li><span class="tnum">D-26</span> 2024 annual financial report of the Party for the Region, list of donors<br><span class="ev-src">Office for the Supervision of Political Party Finances, udhpsh.cz, captured 18 Sep 2026 13:15</span></li><li><span class="tnum">D-27</span> Mayor of Dolní Lhota elected for the Party for the Region (2022 elections)<br><span class="ev-src">Election results (volby.cz), volby.cz, captured 18 Sep 2026 13:30</span></li></ul></dd></div>
+<div class="wide resp"><dt>Prepared response</dt><dd><p class="resp-q">When they ask: You donated to the mayor&#39;s party and then got a contract from the town without a tender. How are they connected?</p><p class="resp-a">They are not. The donation was made by [company] in [month] for [purpose], the contract was awarded by the town after [invitation] in [month], and the award was decided by [body]. We are happy to present the timeline and the documents. So that such questions do not arise, from [date] our companies do not contribute to political parties.</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-19">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Who&#39;s behind it</span>
+        <span class="sev s-noise"><i></i><i></i><i></i>Noise</span>
+        <span class="fc-find f-hour"><i></i><i></i><i></i>A curious person in an hour</span>
+        <span class="det-id tnum">N-19</span>
+      </header>
+      <h3>According to the register, the managing director sits on the boards of four other companies, one in liquidation</h3>
+      <dl class="det-grid">
+        <div><dt>What we found</dt><dd>The public register shows the managing director as a board member or shareholder of four other companies: property management (findings N-17 and N-18), two dormant companies and one in liquidation since 2025 with no creditor claims. A namesake on the board of a company with enforcement proceedings has a different date of birth and company ID and was ruled out. None of this is a problem in itself, but the investor will want it explained on one page.</dd></div>
+        <div><dt>Attack line</dt><dd class="attack">Five companies, one in liquidation, all under one person. Which one is the money paid from?</dd></div>
+<div><dt>Recommendation</dt><dd>Prepare one page with an overview of all the managing director&#39;s companies, their purpose and status, including the ruled-out namesake. Consider dissolving the dormant companies. <span class="dl dl-quarter"><i></i>This quarter</span></dd></div>        <div><dt>Certainty</dt><dd><span class="cert c-verified"></span>Verified</dd></div>
+        <div><dt>Layer</dt><dd><span class="tnum">8</span> Connections</dd></div>
+        <div class="wide"><dt>Evidence</dt><dd><ul class="ev-list"><li><span class="tnum">D-28</span> The managing director&#39;s roles in four other companies, namesake ruled out (different date of birth and company ID)<br><span class="ev-src">Commercial Register, search by person, or.justice.cz/ias/ui/rejstrik-$osoba, captured 18 Sep 2026 14:05</span></li></ul></dd></div>
+      </dl>
+    </article>
+  </template>
+  <template data-detail="N-20">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Who&#39;s behind it</span>
+        <span class="sev s-latent"><i></i><i></i><i></i>Latent</span>
+        <span class="fc-find f-hour"><i></i><i></i><i></i>A curious person in an hour</span>
+        <span class="det-id tnum">N-20</span>
+      </header>
+      <h3>The company&#39;s proxy holder is a shareholder of a subcontractor that worked on the Dolní Lhota contract</h3>
+      <dl class="det-grid">
+        <div><dt>What we found</dt><dd>The proxy holder recorded in the register since 2022 is at the same time a 50 percent shareholder of Beta Sheet Metal s.r.o. In the annex to the order in the Contract Register, that company is listed as the subcontractor for sheet metal work on the Dolní Lhota town hall (finding N-02). Neither the annual report nor the related-party report mentions it. It is not prohibited, but it is an undisclosed conflict of interest that both an investor and a public client see as a risk.</dd></div>
+        <div><dt>Attack line</dt><dd class="attack">The person who signs for the company sends contracts to their own firm.</dd></div>
+<div><dt>Recommendation</dt><dd>Disclose the conflict of interest in writing (internal rule, register of related suppliers, approval by the managing director) and document that the subcontractor&#39;s prices match the market. Include all transactions with Beta Sheet Metal in the related-party report. <span class="dl dl-month"><i></i>This month</span></dd></div>        <div><dt>Certainty</dt><dd><span class="cert c-verified"></span>Verified</dd></div>
+        <div><dt>Layer</dt><dd><span class="tnum">8</span> Connections</dd></div>
+        <div class="wide"><dt>Evidence</dt><dd><ul class="ev-list"><li><span class="tnum">D-29</span> Proxy holder as a 50 percent shareholder of Beta Sheet Metal s.r.o.<br><span class="ev-src">Commercial Register, full extract, or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=000003, captured 18 Sep 2026 14:40</span></li><li><span class="tnum">D-30</span> Annex to the order: list of subcontractors<br><span class="ev-src">Contract Register, smlouvy.gov.cz/smlouva/000000, captured 18 Sep 2026 14:55</span></li></ul></dd></div>
+<div class="wide resp"><dt>Prepared response</dt><dd><p class="resp-q">When they ask: Your proxy holder owns a company you give subcontracts to. Who profits from that?</p><p class="resp-a">Yes, the proxy holder is a shareholder of Beta Sheet Metal. Subcontracts for it are approved exclusively by the managing director, the prices match [comparison with other bids, documented], and from [date] we have a written rule for related suppliers. Over the last three years this concerned [number] contracts worth [amount] in total.</p></dd></div>      </dl>
+    </article>
+  </template>
+  <template data-detail="N-21">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Dirt on the company</span>
+        <span class="sev s-noise"><i></i><i></i><i></i>Noise</span>
+        <span class="fc-find f-hour"><i></i><i></i><i></i>A curious person in an hour</span>
+        <span class="det-id tnum">N-21</span>
+      </header>
+      <h3>Employer reviews: three mentions of late salaries</h3>
+      <dl class="det-grid">
+        <div><dt>What we found</dt><dd>An employer review site has three ratings from 2023 and 2024 that all mention salaries paid several days late. They are old and nothing has been added since, but an investor looking at the company&#39;s stability will find them and connect them with the loans in finding N-17.</dd></div>
+        <div><dt>Attack line</dt><dd class="attack">They do not even pay their own people on time. How are they doing financially?</dd></div>
+<div><dt>Recommendation</dt><dd>If it has been resolved, reply under the reviews on behalf of the company and keep proof for the investor that salaries have been paid on time since 2024. If not, resolve it before anyone asks. <span class="dl dl-quarter"><i></i>This quarter</span></dd></div>        <div><dt>Certainty</dt><dd><span class="cert c-verified"></span>Verified</dd></div>
+        <div><dt>Layer</dt><dd><span class="tnum">9</span> People and processes</dd></div>
+        <div class="wide"><dt>Evidence</dt><dd><ul class="ev-list"><li><span class="tnum">D-31</span> Three employer reviews from 2023 and 2024<br><span class="ev-src">Atmoskop.cz, atmoskop.cz/nazory-na-zamestnavatele/000000, captured 19 Sep 2026 09:30</span></li></ul></dd></div>
+      </dl>
+    </article>
+  </template>
+  <template data-detail="N-22">
+    <article class="det">
+      <header class="det-head">
+        <span class="fc-cat">Leverage</span>
+        <span class="sev s-latent"><i></i><i></i><i></i>Latent</span>
+        <span class="fc-find f-hour"><i></i><i></i><i></i>A curious person in an hour</span>
+        <span class="det-id tnum">N-22</span>
+      </header>
+      <h3>A public Instagram post by a company worker shows a customer&#39;s contract, including address and price</h3>
+      <dl class="det-grid">
+        <div><dt>What we found</dt><dd>Since June 2026, the public profile of a company worker has carried a photo from a construction site with a signed contract for work lying in view: the customer&#39;s name, the address of the family house and the price of EUR 56,000 are legible. The post tags the company and anyone who browses the profiles tagged on the company account will find it. It is a leak of the customer&#39;s personal data that can be used against the company and against the customer. We do not name the worker; it is a process failure, not a check on a person.</dd></div>
+        <div><dt>Attack line</dt><dd class="attack">Your company put my address and what I paid on the internet. Either we sort this out, or I take it to the authority.</dd></div>
+<div><dt>Recommendation</dt><dd>Ask the worker to delete the post, inform the customer and assess the notification duty with the attorney. Introduce a simple rule for site photos (no documents, number plates or faces without consent) and review the profiles tagged on the company account. <span class="dl dl-week"><i></i>This week</span></dd></div>        <div><dt>Certainty</dt><dd><span class="cert c-verified"></span>Verified</dd></div>
+        <div><dt>Layer</dt><dd><span class="tnum">9</span> People and processes</dd></div>
+        <div class="wide"><dt>Evidence</dt><dd><ul class="ev-list"><li><span class="tnum">D-32</span> Post from June 2026 with the photo of the contract (stored with the customer&#39;s details redacted)<br><span class="ev-src">Instagram, public profile tagged on the company account, instagram.com/p/000000, captured 19 Sep 2026 10:10</span></li></ul></dd></div>
+<div class="wide resp"><dt>Prepared response</dt><dd><p class="resp-q">When they ask: My contract and address were visible on your employee&#39;s Instagram. What will you do about it?</p><p class="resp-a">You are right and we apologise. The post was deleted on [date], we assessed the incident with our legal counsel [and notified the authority, fill in according to the assessment]. We have introduced a rule that no documents are photographed on site. We would be glad to meet you in person.</p></dd></div>      </dl>
+    </article>
+  </template>
+</div>
+<dialog class="dlg" data-dialog>
+  <form method="dialog" class="dlg-close"><button type="submit" class="btn-ghost">Close</button></form>
+  <div class="dlg-body" data-dialog-body></div>
+</dialog>
+</main>
+<footer class="ftr">
+  <div class="ftr-in">
+    <div class="ftr-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><defs></defs><path d="M6 60 A67.5 67.5 0 0 1 114 60 A67.5 67.5 0 0 1 6 60 Z" fill="none" stroke="#F5F4F7" stroke-width="11" stroke-linejoin="miter"/><path d="M43 60 A17 17 0 1 0 77 60 A17 17 0 1 0 43 60 Z M62.7 50.2 H68.9 A0.8 0.8 0 0 1 69.7 51 V55.4 A0.8 0.8 0 0 1 68.9 56.2 H62.7 A0.8 0.8 0 0 1 61.9 55.4 V51 A0.8 0.8 0 0 1 62.7 50.2 Z" fill="#F5F4F7" fill-rule="evenodd"/></svg></div>
+    <p class="ftr-line">Public sources only. Passive methods only. You always know first.</p>
+    <nav class="ftr-nav" aria-label="Footer">
+      <a href="../sample/">Sample audit</a>
+      <a href="../contact/">Get in touch</a>
+      <a href="../privacy/">Privacy</a>
+      <a href="../cs/ukazka/" hreflang="cs" lang="cs">Čeština</a>
+    </nav>
+  </div>
+</footer>
+<a class="bar" href="../contact/">Get in touch</a>
+<script src="../static/site.js?v=ff111942fa" defer></script>
+</body>
+</html>

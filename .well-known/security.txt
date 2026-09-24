@@ -1,0 +1,4 @@
+Contact: https://mucsia.github.io/contact/
+Preferred-Languages: en, cs
+Canonical: https://mucsia.github.io/.well-known/security.txt
+Expires: 2027-09-30T00:00:00.000Z

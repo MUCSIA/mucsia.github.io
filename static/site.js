@@ -284,9 +284,10 @@
       if (!endpoint) { note.textContent = msgs.offline || ""; return; }
       var data = {}; $$("input, textarea", form).forEach(function (f) { if (f.name && !f.classList.contains("hp")) data[f.name] = f.type === "checkbox" ? f.checked : f.value.trim(); });
       btn.classList.add("busy"); var label = btn.textContent; btn.textContent = btn.dataset.sending;
-      fetch(endpoint, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data), mode: "cors" })
+      fetch(endpoint, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(data), mode: "cors", redirect: "follow" })
         .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json().catch(function () { return {}; }); })
-        .then(function () {
+        .then(function (j) {
+          if (j && j.ok === false) throw new Error(j.error || "rejected");
           form.classList.add("sent"); ok.hidden = false;
           var eye = $(".contact-eye"); if (eye) { eye.classList.add("blink"); setTimeout(function () { eye.classList.remove("blink"); }, 600); }
         })

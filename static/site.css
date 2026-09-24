@@ -463,9 +463,8 @@ button.btn-ghost { padding: 10px 16px; border-radius: 10px; border: 1.5px solid 
 
 /* ---------- patička, lišta ---------- */
 .ftr { background: var(--chlad); color: var(--papir); border-top: 1px solid var(--linka-tma); }
-.ftr-in { max-width: var(--maxw); margin: 0 auto; padding: 40px var(--gutter) 48px; display: grid; grid-template-columns: auto 1fr auto; gap: 24px; align-items: center; }
+.ftr-in { max-width: var(--maxw); margin: 0 auto; padding: 40px var(--gutter) 48px; display: grid; grid-template-columns: auto auto; justify-content: space-between; gap: 24px; align-items: center; }
 .ftr-mark svg { width: 34px; overflow: visible; }
-.ftr-line { margin: 0; color: var(--mlha); font-size: 14px; }
 .ftr-nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
 .ftr-nav a { color: var(--papir); text-decoration: none; font-size: 14px; font-weight: 600; }
 .ftr-nav a:hover { color: var(--t6); }

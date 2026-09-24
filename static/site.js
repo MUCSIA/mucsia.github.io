@@ -47,7 +47,7 @@
     leads: [[0, 0], [1400, 2], [2300, 4], [3600, 5], [4700, 7], [6300, 8], [7700, 9], [9300, 9], [10800, 10], [12200, 6], [13000, 2], [13400, 0]],
     cards: [[1500, "0"], [3100, "1"], [4600, "s"], [6300, "2"], [7900, "3"], [9500, "4"], [11100, "5"]],
     rounds: [[0, 1], [4200, 2], [7000, 3], [9800, 4], [11800, 5]],
-    struck: 5800, sat: 13400, rep: 14200, fly: 14600, closed: 15500, loop: 18000, first: 1600, still: 14000
+    struck: 5800, sat: 13400, rep: 13600, fly: 14300, gap: 360, land: 720, closed: 17300, loop: 19800, first: 1600, still: 13000
   };
   function interp(plan, t) {
     if (t <= plan[0][0]) return plan[0][1];
@@ -61,12 +61,17 @@
   $$("[data-console]").forEach(function (con) {
     var layers = $$(".con-layers li", con);
     var cS = $("[data-cnt=sources]", con), cL = $("[data-cnt=leads]", con), status = $("[data-status]", con);
-    var report = $("[data-report]", con), byId = {};
+    var report = $("[data-report]", con), stage = $("[data-stage]", con), byId = {};
     $$(".fc", con).forEach(function (c) { byId[c.dataset.card] = c; });
-    var flown = false, lastT = -1;
-    function maxShown() { return parseInt(getComputedStyle(con).getPropertyValue("--con-max"), 10) || 3; }
+    var stack = $$(".rep-stack i", con), lastT = -1, landedN = 0;
+    var cv = function (n) { return parseFloat(getComputedStyle(con).getPropertyValue(n)) || 0; };
     function render(t) {
-      if (t === lastT) return; lastT = t;
+      if (t === lastT) return;
+      if (t < lastT) {  // nová smyčka: bez přechodů, ať karty nevyletí z reportu zpět
+        con.classList.add("reset");
+        requestAnimationFrame(function () { requestAnimationFrame(function () { con.classList.remove("reset"); }); });
+      }
+      lastT = t;
       // vrstvy se rozsvěcují v tempu nálezů; ta, která se právě prohledává, pulzuje
       var lit = 0;
       layers.forEach(function (l, i) { var on = t >= TL.layer(i); l.classList.toggle("lit", on); if (on) lit = i + 1; });
@@ -74,32 +79,57 @@
       cS.textContent = interp(TL.src, t);
       cL.textContent = step(TL.leads, t);
       var round = step(TL.rounds, t);
-      status.textContent = t >= TL.rep ? status.dataset.rep : t >= TL.sat ? status.dataset.sat : round >= 2 ? status.dataset.lead : status.dataset.start;
+      if (status) status.textContent = t >= TL.rep ? status.dataset.rep : t >= TL.sat ? status.dataset.sat : round >= 2 ? status.dataset.lead : status.dataset.start;
+      // všechny nálezy zůstávají: nejnovější celý nahoře, starší složené do řádků pod ním.
+      // Když se objeví report, složí se všechny a po jednom odshora do něj vletí; zbytek pásu se posune nahoru.
       var vis = TL.cards.filter(function (c) { return c[0] <= t; }).sort(function (a, b) { return b[0] - a[0]; });
-      var shown = vis.slice(0, maxShown()).map(function (c) { return byId[c[1]]; });
+      var shown = vis.map(function (c) { return byId[c[1]]; });
+      var feeding = t >= TL.rep;
+      var started = function (i) { return feeding && t >= TL.fly + i * TL.gap; };
+      byId.s.classList.toggle("struck", t >= TL.struck);
       Object.keys(byId).forEach(function (k) {
         var el = byId[k], i = shown.indexOf(el);
         el.classList.toggle("in", i >= 0);
+        el.classList.toggle("mini", i > 0 || (feeding && i === 0));
         if (i >= 0) el.style.setProperty("--pos", i); else el.style.removeProperty("--pos");
       });
-      byId.s.classList.toggle("struck", t >= TL.struck);
-      report.classList.toggle("show", t >= TL.rep);
-      report.classList.toggle("closed", t >= TL.closed);
-      if (t >= TL.fly) {
-        if (!flown) {
-          flown = true;
-          var rr = report.getBoundingClientRect();
-          shown.forEach(function (c) {
-            var cr = c.getBoundingClientRect();
-            c.style.setProperty("--fx", (rr.left + rr.width / 2 - cr.left - cr.width / 2) + "px");
-            c.style.setProperty("--fy", (rr.top + rr.height / 2 - cr.top - cr.height / 2) + "px");
-          });
+      var y = 0, gap = cv("--fc-gap");
+      shown.forEach(function (el, i) {
+        if (started(i)) return;
+        el.style.setProperty("--y", y + "px");
+        y += (el.classList.contains("mini") ? cv("--fc-mini") : cv(el.classList.contains("struck") ? "--fc-struck" : "--fc-full")) + gap;
+      });
+      report.classList.toggle("show", feeding);
+      if (feeding) {
+        var sr = stage.getBoundingClientRect(), rr = $(".rep-cover", report).getBoundingClientRect();
+        shown.forEach(function (el, i) {
+          if (!started(i)) return;
+          if (!el.classList.contains("fly")) {  // cíl vůči výchozí poloze karty ve scéně (vlevo nahoře), spočítaný při startu
+            var w = el.offsetWidth, hh = cv("--fc-mini");
+            el.style.setProperty("--fx", (rr.left + rr.width / 2 - sr.left - w / 2).toFixed(1) + "px");
+            el.style.setProperty("--fy", (rr.top + rr.height * .58 - sr.top - hh / 2).toFixed(1) + "px");
+            el.style.setProperty("--fs", Math.min(.3, rr.width * .8 / w).toFixed(3));
+            el.classList.add("fly");
+          }
+        });
+        var landed = shown.filter(function (c, i) { return t >= TL.fly + i * TL.gap + TL.land; }).length;
+        if (landed !== landedN) {
+          landedN = landed;
+          report.classList.remove("got"); void report.offsetWidth; if (landed) report.classList.add("got");
         }
-        shown.forEach(function (c, i) { c.style.setProperty("--fd", (i * 120) + "ms"); c.classList.add("fly"); });
+        stack.forEach(function (st, i) { st.classList.toggle("on", i < landed); });
       } else {
-        flown = false;
+        landedN = 0;
         Object.keys(byId).forEach(function (k) { byId[k].classList.remove("fly"); });
+        stack.forEach(function (st) { st.classList.remove("on"); });
       }
+      var closed = t >= TL.closed;
+      if (closed && !report.classList.contains("closed")) {  // hotový report se přesune doprostřed prázdné scény
+        var s2 = stage.getBoundingClientRect(), r2 = report.getBoundingClientRect();
+        report.style.setProperty("--cx", (s2.left + s2.width / 2 - r2.left - r2.width / 2).toFixed(1) + "px");
+        report.style.setProperty("--cy", (s2.top + Math.min(s2.height, 440) / 2 - r2.top - r2.height / 2).toFixed(1) + "px");
+      }
+      report.classList.toggle("closed", closed);
     }
     if (reduce) { con.classList.add("static"); render(TL.still); return; }
     var t0 = 0, playing = false, offset = 0;
